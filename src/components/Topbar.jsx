@@ -7,9 +7,6 @@ const navItems = [
     icon: <ChevronDown size={16} />,
   },
   {
-    label: "Employee Login",
-  },
-  {
     label: "Our Businesses",
     icon: <ChevronDown size={16} />,
   },

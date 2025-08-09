@@ -289,7 +289,7 @@ const BlogNewsSection = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="/purbanchal/pages/maintenance"
+            href="purbanchal/pages/maintenance"
             className="inline-flex items-center px-6 py-3 bg-[#3366bb] text-white rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-[#274f9e] transition-all"
             whileHover={{ scale: 1.05 }}
           >

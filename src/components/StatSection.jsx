@@ -54,7 +54,7 @@ const StatsSection = () => {
       value: 17,
       suffix: "+",
       label: "Years of Excellence",
-      description: "Delivering strength & reliability since 1998",
+      description: "Delivering strength & reliability since 2008",
     },
     {
       value: 5000,

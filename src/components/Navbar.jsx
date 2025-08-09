@@ -129,23 +129,24 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className={`fixed top-[2rem] left-0 right-0 z-[49] transition-all duration-300 ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      } ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}`}
+      className={`fixed top-[2rem] left-0 right-0 z-[49] transition-all duration-300 ${showNavbar ? "translate-y-0" : "-translate-y-full"
+        } ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-[4rem]">
         {/* Logo in container */}
-        <motion.div 
-          whileHover={{ scale: 1.05 }} 
+        <motion.a
+          href="/"
+          whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-white p-2 rounded-lg shadow-sm"
+          className="bg-white p-2 rounded-lg shadow-sm inline-block"
         >
           <img
             src={`${__IMAGE_BASE_PATH__}/logo.png`}
             alt="Purbanchal Cement Logo"
             className="h-10 w-auto cursor-pointer"
           />
-        </motion.div>
+        </motion.a>
+
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 h-full ml-auto mr-6">
@@ -161,13 +162,12 @@ const Navbar = () => {
                     setOpenDropdown(null);
                   }
                 }}
-                className={`flex items-center text-lg font-medium ${
-                  activeLink === link.href
+                className={`flex items-center text-lg font-medium ${activeLink === link.href
                     ? "text-[#3366BB] font-semibold"
-                    : isScrolled 
+                    : isScrolled
                       ? "text-gray-700 hover:text-[#3366BB]"
                       : "text-white hover:text-orange-500"
-                }`}
+                  }`}
               >
                 {link.label}
                 {link.hasDropdown && (
@@ -225,11 +225,10 @@ const Navbar = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => setShowSearch(true)}
-                className={`p-2 rounded-full ${
-                  isScrolled 
+                className={`p-2 rounded-full ${isScrolled
                     ? "bg-gray-100 text-gray-700 hover:bg-[#3366BB] hover:text-white"
                     : "bg-white/20 text-white hover:bg-orange-500"
-                }`}
+                  }`}
               >
                 <HiSearch className="h-5 w-5" />
               </motion.button>
@@ -280,11 +279,10 @@ const Navbar = () => {
                           setActiveLink(link.href);
                         }
                       }}
-                      className={`block py-3 px-4 text-lg w-full ${
-                        activeLink === link.href
+                      className={`block py-3 px-4 text-lg w-full ${activeLink === link.href
                           ? "text-[#3366BB] font-medium"
                           : "text-gray-700 hover:bg-gray-100"
-                      }`}
+                        }`}
                     >
                       {link.label}
                     </a>

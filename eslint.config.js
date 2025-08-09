@@ -25,5 +25,9 @@ export default defineConfig([
     rules: {
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
+    globals: {
+      __BASE_PATH__: 'readonly',
+      __IMAGE_BASE_PATH__: 'readonly'
+    }
   },
 ])
