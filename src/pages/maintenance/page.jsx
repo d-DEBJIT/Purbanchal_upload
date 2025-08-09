@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Wrench, Clock, Mail, Phone, HardHat } from 'lucide-react';
 
 const IMAGE_BASE = __IMAGE_BASE_PATH__;
 
 const MaintenancePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-white min-h-screen font-sans flex flex-col">
       {/* Animated Background with Construction Elements */}
