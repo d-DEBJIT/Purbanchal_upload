@@ -173,7 +173,7 @@ const SustainabilitySection = () => {
           viewport={{ once: true }}
         >
           <a 
-            href="/sustainability-report.pdf" 
+            href="/purbanchal/pages/maintenance" 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300 font-medium"

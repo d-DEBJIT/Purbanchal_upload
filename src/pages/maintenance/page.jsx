@@ -110,7 +110,7 @@ const MaintenancePage = () => {
             <p>We're working hard to improve your experience</p>
           </motion.div>
 
-          <motion.div 
+          {/* <motion.div 
             className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-10 text-left rounded-r-lg relative overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -146,7 +146,7 @@ const MaintenancePage = () => {
                 <span>Updates: Follow our social media for progress</span>
               </li>
             </ul>
-          </motion.div>
+          </motion.div> */}
 
           <motion.div 
             className="space-y-6 text-left max-w-md mx-auto mb-8"
@@ -170,8 +170,8 @@ const MaintenancePage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Email us at</p>
-                <a href="mailto:support@purbanchal.com" className="text-blue-600 hover:underline font-medium">
-                  support@purbanchal.com
+                <a href="mailto:customercare@purbanchalcement.com" className="text-blue-600 hover:underline font-medium">
+                  customercare@purbanchalcement.com
                 </a>
               </div>
             </motion.div>
@@ -185,8 +185,8 @@ const MaintenancePage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Call us at</p>
-                <a href="tel:+18001234567" className="text-blue-600 hover:underline font-medium">
-                  1800-123-4567 (24/7 Support)
+                <a href="tel:+919678017888" className="text-blue-600 hover:underline font-medium">
+                  +919678017888
                 </a>
               </div>
             </motion.div>
@@ -196,7 +196,7 @@ const MaintenancePage = () => {
         </motion.div>
       </main>
 
-      {/* Progress Bar */}
+      {/* Progress Bar
       <div className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto w-full mb-8">
         <motion.div 
           className="bg-gray-200 rounded-full h-4 overflow-hidden"
@@ -219,7 +219,7 @@ const MaintenancePage = () => {
         >
           Maintenance progress: 65%
         </motion.p>
-      </div>
+      </div> */}
 
       {/* Footer */}
       <footer className="bg-gray-100 py-8 border-t border-gray-200">

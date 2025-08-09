@@ -1,8 +1,10 @@
 /* global __IMAGE_BASE_PATH__ */
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const ProjectsSection = () => {
+  const navigate = useNavigate();
   const [activeFilter, setActiveFilter] = useState("All");
   const [visibleProjects, setVisibleProjects] = useState(4);
   const [activeProject, setActiveProject] = useState(null);
@@ -91,13 +93,12 @@ const ProjectsSection = () => {
   const handleProjectClick = (projectId, e) => {
     // Check if it's a touch device
     const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints;
-    
     if (isTouchDevice) {
       e.preventDefault();
       setActiveProject(activeProject === projectId ? null : projectId);
     } else {
       // For non-touch devices, navigate to project page
-      window.location.href = `/projects/${projectId}`;
+      navigate("/pages/maintenance");
     }
   };
 
@@ -201,16 +202,19 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     
-                    <a 
-                      href={`/projects/${project.id}`} 
+                    <button
+                      type="button"
                       className="inline-flex items-center px-4 py-2 border border-white text-white rounded-lg hover:bg-white hover:text-orange-500 transition-colors"
-                      onClick={(e) => e.stopPropagation()}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        navigate("/pages/maintenance");
+                      }}
                     >
                       View Details
                       <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </a>
+                    </button>
                   </div>
                 </div>
               </div>
