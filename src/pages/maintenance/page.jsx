@@ -52,7 +52,7 @@ const MaintenancePage = () => {
           </motion.h1>
           
           <motion.div
-            className="w-48 h-2 bg-gradient-to-r from-orange-600 to-orange-400 rounded-full mb-4"
+            className="w-230 h-2 bg-gradient-to-r from-orange-600 to-orange-400 rounded-full mb-4"
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
@@ -70,7 +70,7 @@ const MaintenancePage = () => {
       </div>
 
       {/* Main Content */}
-      <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-1 w-full">
+  <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-12 w-full">
         <motion.div
           className="bg-white/90 backdrop-blur-sm p-8 sm:p-10 rounded-xl shadow-2xl w-full text-center border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
@@ -230,7 +230,7 @@ const MaintenancePage = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
           >
-            <p className="mb-2">© {new Date().getFullYear()} Dalmia Cement. All rights reserved.</p>
+            <p className="mb-2">© {new Date().getFullYear()} Purbanchal Cement. All rights reserved.</p>
             <p className="text-sm">We appreciate your patience during this upgrade.</p>
           </motion.div>
         </div>
