@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { Calendar, Clock, Heart, MessageCircle, Tag } from 'lucide-react';
 
 const BlogNewsSection = () => {
+  const navigate = useNavigate();
   const [expandedAuthor, setExpandedAuthor] = useState(null);
 
   const featuredPosts = [
@@ -289,7 +291,7 @@ const BlogNewsSection = () => {
           viewport={{ once: true }}
         >
           <motion.a
-            href="purbanchal/pages/maintenance"
+            onClick={() => navigate("/pages/maintenance")}
             className="inline-flex items-center px-6 py-3 bg-[#3366bb] text-white rounded-lg font-semibold shadow-md hover:shadow-lg hover:bg-[#274f9e] transition-all"
             whileHover={{ scale: 1.05 }}
           >

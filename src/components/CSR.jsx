@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from "react-router-dom";
 
 const CSRSection = () => {
+  const navigate = useNavigate();
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
@@ -93,7 +95,8 @@ serve."
 a better tomorrow"
               </p>
             </div>
-            <button 
+            <button
+              onClick={() => navigate("/pages/maintenance")}
               className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-all font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
             >
               Explore Our CSR Initiatives

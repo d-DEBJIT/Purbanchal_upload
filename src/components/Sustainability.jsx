@@ -1,8 +1,10 @@
 /* global __IMAGE_BASE_PATH__ */
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
 const SustainabilitySection = () => {
+  const navigate = useNavigate();
   const [activeCard, setActiveCard] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -173,7 +175,7 @@ const SustainabilitySection = () => {
           viewport={{ once: true }}
         >
           <a 
-            href="/purbanchal/pages/maintenance" 
+            onClick={() => navigate("/pages/maintenance")} 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300 font-medium"

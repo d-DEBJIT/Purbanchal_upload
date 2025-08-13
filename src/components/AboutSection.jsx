@@ -1,8 +1,10 @@
 /* global __IMAGE_BASE_PATH__ */
 import React, { useRef } from 'react';
+import { useNavigate } from "react-router-dom";
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const AboutSection = () => {
+  const navigate = useNavigate();
   const sectionRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -111,7 +113,8 @@ every structure in <span class="font-bold">Northeast India and beyond</span>.
               className="pt-6"
               variants={itemVariants}
             >
-              <motion.button 
+              <motion.button
+              onClick={() => navigate("/pages/maintenance")} 
                 className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-4 px-8 rounded-full transition-colors duration-300 shadow-lg hover:shadow-xl"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

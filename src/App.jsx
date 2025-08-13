@@ -24,6 +24,9 @@ import NewsPage from './pages/news/page';
 import NewsArticlePage from "./pages/news/[title]/page";
 import ProductPage from "./pages/products/page";
 import MaintenancePage from "./pages/maintenance/page";
+import ManufacturingProcessPage from "./pages/Manufacturing/page";
+import CustomerCarePage from "./pages/customercare/page";
+import ProfilePage from "./pages/profile/page";
 function HomePage(){
   return (
       <>
@@ -66,6 +69,12 @@ function App() {
           <Route path="/pages/products" element={<ProductPage />} />
           {/* Maintenance page */}
           <Route path="/pages/maintenance" element={<MaintenancePage />} />
+          {/* Manufacturing page */}
+          <Route path="/pages/manufacturing" element={<ManufacturingProcessPage />} />
+          {/* Customer Care page */}
+          <Route path="/pages/customercare" element={<CustomerCarePage />} />
+          {/* Profile page ProfilePage */}
+          <Route path="/pages/profile" element={<ProfilePage />} />
 
 
 
