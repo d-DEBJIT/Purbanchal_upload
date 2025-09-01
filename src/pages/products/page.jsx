@@ -13,7 +13,7 @@ const ProductsPage = () => {
     {
       id: 1,
       name: 'Concrete',
-      description: 'High-quality steel beams for structural applications with superior load-bearing capacity.',      longDescription: 'Dalmia Cement has been designed to provide quality that lasts a lifetime. Our advanced formulation ensures superior strength and durability for all construction needs.',
+      description: 'High-quality steel beams for structural applications with superior load-bearing capacity.',      longDescription: 'Purbanchal Cement has been designed to provide quality that lasts a lifetime. Our advanced formulation ensures superior strength and durability for all construction needs.',
       category: 'Premium',
       price: 249.99,
       rating: 4.8,
@@ -31,7 +31,7 @@ const ProductsPage = () => {
     {
       id: 2,
       name: 'PPC',
-      description: 'Aesthetic and durable metal panels for modern architectural facades and interiors.',      longDescription: 'Dalmia Supreme Cement is engineered for superior performance across all construction applications. Its unique formulation provides excellent workability and finish.',
+      description: 'Aesthetic and durable metal panels for modern architectural facades and interiors.',      longDescription: 'Purbanchal Supreme Cement is engineered for superior performance across all construction applications. Its unique formulation provides excellent workability and finish.',
       category: 'Premium',
       price: 189.50,
       rating: 4.6,
@@ -49,7 +49,7 @@ const ProductsPage = () => {
     {
       id: 3,
       name: 'OPC',
-      description: 'Corrosion-resistant piping solutions for industrial fluid transport applications.',      longDescription: 'Dalmia USP cement is specially formulated to deliver high-strength concrete required for critical structural elements like foundations, columns and slabs.',
+      description: 'Corrosion-resistant piping solutions for industrial fluid transport applications.',      longDescription: 'Purbanchal USP cement is specially formulated to deliver high-strength concrete required for critical structural elements like foundations, columns and slabs.',
       category: 'Specialized',
       price: 329.99,
       rating: 4.9,
@@ -87,9 +87,9 @@ const ProductsPage = () => {
   // Categories for filtering
   const categories = [
     { id: 'all', name: 'All Products' },
-    { id: 'Dalmia Cement', name: 'Dalmia Cement' },
-    { id: 'Dalmia Supreme', name: 'Dalmia Supreme' },
-    { id: 'Dalmia USP Cement', name: 'Dalmia USP Cement' },
+    { id: 'Purbanchal Cement', name: 'Purbanchal Cement' },
+    { id: 'Purbanchal Supreme', name: 'Purbanchal Supreme' },
+    { id: 'Purbanchal USP Cement', name: 'Purbanchal USP Cement' },
     { id: 'Konark Cement', name: 'Konark Cement' },
   ];
 
