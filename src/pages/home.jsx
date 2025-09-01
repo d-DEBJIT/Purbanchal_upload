@@ -33,7 +33,6 @@ const Home =()=> {
         
         <SustainabilitySection />
         <Testimonials />
-        <CSRSection />
         <BlogNewsSection />
         <LegacySection />
         {/* <div className="h-20"></div> */}
