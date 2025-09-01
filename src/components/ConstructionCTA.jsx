@@ -1,7 +1,10 @@
 /* global __IMAGE_BASE_PATH__ */
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ConstructionCTA = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -29,12 +32,12 @@ const ConstructionCTA = () => {
 are achieved with unmatched quality and speed.
               </p>
               <div className="pt-2">
-                <a 
-                  href="#contact-form" 
+                <button 
+                  onClick={() => navigate('/pages/customercare')} // Replace with your actual page path
                   className="inline-flex items-center bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-300"
                 >
                   Contact Us <span className="ml-2">→</span>
-                </a>
+                </button>
               </div>
             </div>
           </div>

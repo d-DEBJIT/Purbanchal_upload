@@ -1,15 +1,25 @@
 import React, { useState } from "react";
 import { FaPlay } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 
-
-const buttonLabels = ["Surya Concreate", "Surya PPC", "Surya OPC", "Buy Fresh Bulk Cement"];
+const buttonLabels = [
+  { label: "Surya Concreate", path: "/pages/products" },
+  { label: "Surya PPC", path: "/pages/products" },
+  { label: "Surya OPC", path: "/pages/products" },
+  { label: "Buy Fresh Bulk Cement", path: "/pages/products" }
+];
 
 const Addition = () => {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.3 });
   const [activeButton, setActiveButton] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleButtonClick = (index, path) => {
+    setActiveButton(index);
+    navigate(path);
+  };
 
   return (
     <section className="relative bg-white overflow-hidden">
@@ -49,7 +59,10 @@ const Addition = () => {
                 From high-rises to homes, every mix of our cement stands for<span className="font-bold"> durability, reliability,</span> and <span className="font-bold">trust</span>.
               </p>
             </div>
-            <button className="w-fit bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 text-lg font-medium">
+            <button 
+              onClick={() => navigate('/pages/customercare')}
+              className="w-fit bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md shadow-lg transition-all duration-300 transform hover:scale-105 text-lg font-medium"
+            >
               Talk to Our Team
             </button>
           </div>
@@ -59,10 +72,10 @@ const Addition = () => {
 
           {/* Top Right Buttons */}
           <div className="md:w-1/3 w-full grid grid-cols-1 sm:grid-cols-2 gap-3 self-center">
-            {buttonLabels.map((label, index) => (
+            {buttonLabels.map((button, index) => (
               <button
                 key={index}
-                onClick={() => setActiveButton(index)}
+                onClick={() => handleButtonClick(index, button.path)}
                 className={`w-full h-[56px] box-border text-center rounded-lg text-base font-medium transition-all duration-200 border-2 whitespace-nowrap
                 ${
                   activeButton === index
@@ -70,7 +83,7 @@ const Addition = () => {
                     : "bg-white border-gray-300 text-[#3366BB] hover:shadow-md hover:border-orange-300"
                 }`}
               >
-                {label}
+                {button.label}
               </button>
             ))}
           </div>

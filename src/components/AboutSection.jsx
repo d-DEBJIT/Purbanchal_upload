@@ -96,7 +96,7 @@ const AboutSection = () => {
 integrated cement manufacturing facility in Sonapur, Assam.
               </p>
                <p className="text-gray-500 text-lg leading-relaxed">
-Under our trusted brands <span class="font-bold">Surya Gold Cement</span> and <span class="font-bold">Surya Concreto</span> we produce BIS-standard
+Under our trusted brands <span class="font-bold">Surya Gold Cement</span> and <span class="font-bold">Surya Concretec</span> we produce BIS-standard
 <span class="font-bold"> PPC, OPC,</span> and premium-grade <span class="font-bold">Concrete Cement</span>, catering to diverse construction needs.
               </p>
                <p className="text-gray-500 text-lg leading-relaxed">

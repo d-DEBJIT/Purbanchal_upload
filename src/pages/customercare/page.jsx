@@ -129,7 +129,7 @@ const CustomerCarePage = () => {
             >
               <Phone className="text-orange-500 mb-3" size={36} />
               <h3 className="font-semibold">Call Us</h3>
-              <p className="text-gray-600">+91 9678017888</p>
+              <p className="text-gray-600">+91 7099019550</p>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}

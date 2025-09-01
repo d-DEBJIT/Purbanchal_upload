@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ToolsSection = () => {
   const [activeTool, setActiveTool] = useState(null);
+  const navigate = useNavigate();
 
   return (
     <section className="py-16 bg-gradient-to-b from-[#f5f8fa] to-white relative overflow-hidden">
@@ -21,7 +23,7 @@ const ToolsSection = () => {
           <p className="animate-fadeIn delay-100">
             <span className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
               Instantly calculate costs, locate trusted dealers near you, and access expert construction
-              guidance all designed to make your project <span class="font-bold">faster, smarter,</span> and  <span class="font-bold">stress-free</span>.
+              guidance all designed to make your project <span className="font-bold">faster, smarter,</span> and  <span className="font-bold">stress-free</span>.
             </span>
           </p>
         </div>
@@ -42,7 +44,8 @@ const ToolsSection = () => {
                 { type: "input", placeholder: "Area in sq.feet" },
               ],
               buttonText: "Calculate Now",
-              timeBadge: "Takes 30 seconds"
+              timeBadge: "Takes 30 seconds",
+              path: "/pages/maintenance" // Add the path to your calculator page
             },
             {
               title: "Dealer Locator",
@@ -59,7 +62,8 @@ const ToolsSection = () => {
                 { type: "input", placeholder: "Pincode" },
               ],
               buttonText: "Find Dealers",
-              timeBadge: "Takes 45 seconds"
+              timeBadge: "Takes 45 seconds",
+              path: "/pages/maintenance" // Add the path to your dealer locator page
             },
             {
               title: "Construction Guide",
@@ -72,7 +76,8 @@ const ToolsSection = () => {
               ),
               isGuide: true,
               buttonText: "Explore Guide",
-              timeBadge: "Quick tips"
+              timeBadge: "Quick tips",
+              path: "/pages/maintenance" // Add the path to your guide page
             },
           ].map((tool, idx) => (
             <div
@@ -153,6 +158,7 @@ const ToolsSection = () => {
                 )}
 
                 <button
+                  onClick={() => navigate(tool.path)}
                   className={`w-full ${
                     tool.isGuide
                       ? "flex items-center justify-center gap-2 text-orange-500 hover:text-orange-600"

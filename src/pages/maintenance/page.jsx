@@ -150,8 +150,8 @@ const MaintenancePage = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-500">Call us at</p>
-                <a href="tel:+919678017888" className="text-blue-600 hover:underline font-medium">
-                  +919678017888
+                <a href="tel:+917099019550" className="text-blue-600 hover:underline font-medium">
+                  +917099019550
                 </a>
               </div>
             </motion.div>

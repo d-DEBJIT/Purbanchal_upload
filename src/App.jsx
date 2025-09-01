@@ -35,15 +35,15 @@ function HomePage(){
         <AboutSection />
         <Addition />        
         <StrengthLineup />
-        <ToolsSection />
+        {/* <ToolsSection /> */}
         <WhyChooseUs />
-        <ManufacturingProcess />
+        {/* <ManufacturingProcess /> */}
         <SustainabilitySection />
         <ProjectSection />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <CSRSection />
         <BlogNewsSection />
-        <ConstructionCTA /> 
+        {/* <ConstructionCTA />  */}
       </>
   );
 }

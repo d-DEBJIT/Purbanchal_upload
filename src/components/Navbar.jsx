@@ -1,5 +1,6 @@
 /* global __IMAGE_BASE_PATH__ */
 import React, { useState, useRef, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   HiMenu,
   HiX,
@@ -12,6 +13,7 @@ import { motion, AnimatePresence } from "framer-motion";
 // Dropdown Component
 const DropdownMenu = ({ items, isOpen, onClose }) => {
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -26,6 +28,15 @@ const DropdownMenu = ({ items, isOpen, onClose }) => {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isOpen, onClose]);
 
+  const handleItemClick = (item) => {
+    if (item.path) {
+      navigate(item.path);
+    } else {
+      window.location.href = item.href;
+    }
+    onClose();
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -39,16 +50,16 @@ const DropdownMenu = ({ items, isOpen, onClose }) => {
         >
           <div className="py-1">
             {items.map((item, index) => (
-              <motion.a
+              <motion.button
                 key={index}
-                href={item.href}
+                onClick={() => handleItemClick(item)}
                 initial={{ x: -10 }}
                 animate={{ x: 0 }}
                 transition={{ delay: index * 0.05 }}
-                className="block px-5 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all"
+                className="block w-full text-left px-5 py-3 text-base text-gray-700 hover:bg-gray-100 hover:text-gray-900 transition-all"
               >
                 {item.label}
-              </motion.a>
+              </motion.button>
             ))}
           </div>
         </motion.div>
@@ -67,6 +78,7 @@ const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSearch, setShowSearch] = useState(false);
+  const navigate = useNavigate();
 
   const navLinks = [
     {
@@ -74,10 +86,9 @@ const Navbar = () => {
       label: "About us",
       hasDropdown: true,
       dropdownItems: [
-        { href: "#about-company", label: "Our Company" },
-        { href: "#about-team", label: "Our Team" },
-        { href: "#about-mission", label: "Mission & Vision" },
-        { href: "#careers", label: "Careers" },
+        { path: "/pages/profile", label: "Our Company" },
+        { path: "/pages/profile", label: "Our Team" },
+        { path: "/pages/profile", label: "Mission & Vision" },
       ],
     },
     {
@@ -85,9 +96,10 @@ const Navbar = () => {
       label: "Products",
       hasDropdown: true,
       dropdownItems: [
-        { href: "#surya-gold-cement", label: "Surya Gold Cement" },
-        { href: "#surya-concreto", label: "Surya Concreto" },
-        { href: "#product-comparison", label: "Product Comparison" },
+        { path: "/pages/products", label: "Surya Gold Cement" },
+        { path: "/pages/products", label: "Surya Concretec" },
+        { path: "/pages/products", label: "Surya-OPC" },
+        { path: "/pages/products", label: "Fresh Bulk Cement" },
       ],
     },
     {
@@ -95,13 +107,26 @@ const Navbar = () => {
       label: "Manufacturing",
       hasDropdown: true,
       dropdownItems: [
-        { href: "#manufacturing-process", label: "Our Process" },
-        { href: "#manufacturing-facilities", label: "Facilities" },
-        { href: "#manufacturing-quality", label: "Quality Control" },
+        { path: "/pages/manufacturing", label: "Our Process" },
+        { path: "/pages/manufacturing", label: "Facilities" },
+        { path: "/pages/manufacturing", label: "Quality Control" },
       ],
     },
-    { href: "#sustainability", label: "Sustainability" },
-    { href: "#media", label: "Media" },
+    { 
+      href: "#sustainability", 
+      label: "Sustainability",
+      path: "/pages/maintenance"
+    },
+    { 
+      href: "#media", 
+      label: "Media",
+      path: "/pages/news"
+    },
+    { 
+      href: "#careers", 
+      label: "Careers",
+      path: "/pages/maintenance"
+    },
   ];
 
   const toggleDropdown = (index) => {
@@ -113,6 +138,28 @@ const Navbar = () => {
     console.log("Searching:", searchQuery);
     setSearchQuery("");
     setShowSearch(false);
+  };
+
+  const handleNavLinkClick = (link) => {
+    if (link.path) {
+      navigate(link.path);
+      setIsMenuOpen(false);
+    } else if (link.hasDropdown) {
+      const index = navLinks.findIndex(item => item.label === link.label);
+      toggleDropdown(index);
+    } else {
+      window.location.href = link.href;
+      setIsMenuOpen(false);
+    }
+  };
+
+  const handleMobileItemClick = (item) => {
+    if (item.path) {
+      navigate(item.path);
+      setIsMenuOpen(false);
+    } else {
+      window.location.href = item.href;
+    }
   };
 
   useEffect(() => {
@@ -133,7 +180,7 @@ const Navbar = () => {
         } ${isScrolled ? "bg-white shadow-md" : "bg-transparent shadow-none"}`}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center px-4 sm:px-6 lg:px-8 h-[4rem]">
-        {/* Logo in container */}
+        {/* Logo */}
         <motion.a
           href="/"
           whileHover={{ scale: 1.05 }}
@@ -147,7 +194,6 @@ const Navbar = () => {
           />
         </motion.a>
 
-
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8 h-full ml-auto mr-6">
           {navLinks.map((link, index) => (
@@ -155,13 +201,7 @@ const Navbar = () => {
               <motion.button
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  if (link.hasDropdown) toggleDropdown(index);
-                  else {
-                    setActiveLink(link.href);
-                    setOpenDropdown(null);
-                  }
-                }}
+                onClick={() => handleNavLinkClick(link)}
                 className={`flex items-center text-lg font-medium ${activeLink === link.href
                     ? "text-[#3366BB] font-semibold"
                     : isScrolled
@@ -271,21 +311,15 @@ const Navbar = () => {
                   transition={{ delay: index * 0.05 }}
                 >
                   <div className="flex items-center justify-between">
-                    <a
-                      href={link.href}
-                      onClick={() => {
-                        if (!link.hasDropdown) {
-                          setIsMenuOpen(false);
-                          setActiveLink(link.href);
-                        }
-                      }}
-                      className={`block py-3 px-4 text-lg w-full ${activeLink === link.href
+                    <button
+                      onClick={() => handleNavLinkClick(link)}
+                      className={`block py-3 px-4 text-lg w-full text-left ${activeLink === link.href
                           ? "text-[#3366BB] font-medium"
                           : "text-gray-700 hover:bg-gray-100"
                         }`}
                     >
                       {link.label}
-                    </a>
+                    </button>
                     {link.hasDropdown && (
                       <button onClick={() => toggleDropdown(index)} className="p-2 mr-2">
                         <motion.div
@@ -305,14 +339,13 @@ const Navbar = () => {
                       className="pl-6 space-y-1"
                     >
                       {link.dropdownItems.map((item, i) => (
-                        <a
+                        <button
                           key={i}
-                          href={item.href}
-                          onClick={() => setIsMenuOpen(false)}
-                          className="block py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-lg"
+                          onClick={() => handleMobileItemClick(item)}
+                          className="block w-full text-left py-2 px-4 text-gray-600 hover:bg-gray-100 rounded-lg"
                         >
                           {item.label}
-                        </a>
+                        </button>
                       ))}
                     </motion.div>
                   )}
