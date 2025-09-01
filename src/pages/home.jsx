@@ -2,7 +2,7 @@ import React from "react"; // ✅ Add this
 import "./App.css";
 //import ManufacturingProcess from "./components/ManufacturingProcess";
 import StatsSection from "./components/StatSection";
-import WhyChooseUs from "./components/WhyChooseUs";
+// import WhyChooseUs from "./components/WhyChooseUs";
 //import ToolsSection from "./components/ToolsSection";
 import Topbar from "./components/Topbar";
 import Navbar from "./components/Navbar";
@@ -29,7 +29,7 @@ const Home =()=> {
         <Addition />        
         <StrengthLineup />
         
-        <WhyChooseUs />
+        {/* <WhyChooseUs /> */}
         
         <SustainabilitySection />
         <Testimonials />

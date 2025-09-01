@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ArrowLeft, ArrowRight } from "lucide-react"; // ✅ Import Lucide icons
 
 const ToolsSection = () => {
   const [activeTool, setActiveTool] = useState(null);
@@ -15,10 +16,10 @@ const ToolsSection = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3 animate-fadeIn">
-            <span className="inline-block hover:-translate-x-1 transition-transform duration-300">←</span>{" "}
-            Your Hassle Free Projects Start Here{" "}
-            <span className="inline-block hover:translate-x-1 transition-transform duration-300">→</span>
+          <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3 animate-fadeIn flex items-center justify-center gap-2">
+            <ArrowLeft className="w-5 h-5 inline-block transition-transform duration-300 hover:-translate-x-1" /> 
+            Your Hassle Free Projects Start Here 
+            <ArrowRight className="w-5 h-5 inline-block transition-transform duration-300 hover:translate-x-1" />
           </h2>
           <p className="animate-fadeIn delay-100">
             <span className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
@@ -27,6 +28,7 @@ const ToolsSection = () => {
             </span>
           </p>
         </div>
+
         <div className="grid md:grid-cols-3 gap-6 sm:gap-8">
           {[
             {
@@ -45,7 +47,7 @@ const ToolsSection = () => {
               ],
               buttonText: "Calculate Now",
               timeBadge: "Takes 30 seconds",
-              path: "/pages/maintenance" // Add the path to your calculator page
+              path: "/pages/maintenance"
             },
             {
               title: "Dealer Locator",
@@ -63,7 +65,7 @@ const ToolsSection = () => {
               ],
               buttonText: "Find Dealers",
               timeBadge: "Takes 45 seconds",
-              path: "/pages/maintenance" // Add the path to your dealer locator page
+              path: "/pages/maintenance"
             },
             {
               title: "Construction Guide",
@@ -77,7 +79,7 @@ const ToolsSection = () => {
               isGuide: true,
               buttonText: "Explore Guide",
               timeBadge: "Quick tips",
-              path: "/pages/maintenance" // Add the path to your guide page
+              path: "/pages/maintenance"
             },
           ].map((tool, idx) => (
             <div
@@ -167,9 +169,7 @@ const ToolsSection = () => {
                 >
                   {tool.isGuide ? (
                     <>
-                      <span className="text-lg transition-transform duration-300 group-hover/button:translate-x-1">
-                        →
-                      </span>
+                      <ArrowRight className="w-5 h-5 transition-transform duration-300 group-hover/button:translate-x-1" />
                       <span className="transition-all duration-300 group-hover/button:font-bold">
                         {tool.buttonText}
                       </span>

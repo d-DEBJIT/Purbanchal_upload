@@ -3,8 +3,21 @@ import React from "react";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import { Link, useNavigate } from "react-router-dom";
+import { ChevronRight } from "lucide-react";
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Function to handle navigation with scroll to top
+  const handleNavigation = (path) => {
+    navigate(path);
+    // Scroll to top after a short delay to ensure page transition happens
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <motion.footer
       variants={fadeIn("up", 0.2)}
@@ -16,10 +29,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4">
         <motion.div 
           variants={fadeIn("up", 0.3)}
-          className="grid md:grid-cols-4 gap-8 text-sm"
+          className="grid md:grid-cols-5 gap-8 text-sm"
         >
           {/* Company Info */}
-          <motion.div variants={fadeIn("right", 0.4)}>
+          <motion.div variants={fadeIn("right", 0.4)} className="md:col-span-1">
             <div className="flex items-center mb-4">
               <img 
                 src={`${__IMAGE_BASE_PATH__}/logo1.png`} 
@@ -38,6 +51,7 @@ const Footer = () => {
               variants={fadeIn("up", 0.6)}
               className="flex space-x-3"
             >
+              {/* Social Links */}
               <motion.a
                 whileHover={{ scale: 1.1 }}
                 href="https://www.linkedin.com/company/suryacementofficial/?originalSubdomain=in"
@@ -72,7 +86,7 @@ const Footer = () => {
           </motion.div>
 
           {/* Products */}
-          <motion.div variants={fadeIn("up", 0.5)}>
+          <motion.div variants={fadeIn("up", 0.5)} className="md:col-span-1">
             <motion.h3 
               variants={textVariant(0.2)}
               className="font-semibold text-lg mb-4 border-b border-white/20 pb-2"
@@ -80,41 +94,52 @@ const Footer = () => {
               Products
             </motion.h3>
             <motion.ul variants={fadeIn("up", 0.6)} className="space-y-2">
-              {["Surya PPC", "Surya OPC", "Surya Concrete", "Fresh Bulk Cement"].map((item, idx) => (
-                <motion.li key={item} variants={fadeIn("up", 0.7 + idx * 0.1)}>
-                  <motion.a
-                    whileHover={{ x: 5 }}
-                    href="#"
-                    className="hover:underline hover:text-orange-300 transition-colors flex items-center"
+              {[
+                { name: "Surya PPC", path: "/pages/products" },
+                { name: "Surya OPC", path: "/pages/products" },
+                { name: "Surya Concrete", path: "/pages/products" },
+                { name: "Fresh Bulk Cement", path: "/pages/products" }
+              ].map((item, idx) => (
+                <motion.li key={item.name} variants={fadeIn("up", 0.7 + idx * 0.1)}>
+                  <button
+                    onClick={() => handleNavigation(item.path)}
+                    className="hover:underline hover:text-orange-300 transition-colors flex items-center gap-2 w-full text-left"
                   >
-                    ‹ {item}
-                  </motion.a>
+                    <ChevronRight size={16} /> {item.name}
+                  </button>
                 </motion.li>
               ))}
             </motion.ul>
           </motion.div>
 
-          {/* Businesses & Quick Links */}
-          <motion.div variants={fadeIn("up", 0.6)}>
+          {/* Businesses */}
+          <motion.div variants={fadeIn("up", 0.6)} className="md:col-span-1">
             <motion.h3 
               variants={textVariant(0.3)}
               className="font-semibold text-lg mb-4 border-b border-white/20 pb-2"
             >
               Businesses
             </motion.h3>
-            <motion.ul variants={fadeIn("up", 0.7)} className="space-y-2 mb-6">
-              {["Maithan Steels", "Maithan Alloys", "Maithan Ceramic"].map((item, idx) => (
-                <motion.li key={item} variants={fadeIn("up", 0.8 + idx * 0.1)}>
-                  <motion.a
-                    whileHover={{ x: 5 }}
-                    href="#"
-                    className="hover:underline hover:text-orange-300 transition-colors flex items-center"
+            <motion.ul variants={fadeIn("up", 0.7)} className="space-y-2">
+              {[
+                { name: "Maithan Steels", path: "/pages/maintenance" },
+                { name: "Maithan Alloys", path: "/pages/maintenance" },
+                { name: "Maithan Ceramic", path: "/pages/maintenance" }
+              ].map((item, idx) => (
+                <motion.li key={item.name} variants={fadeIn("up", 0.8 + idx * 0.1)}>
+                  <button
+                    onClick={() => handleNavigation(item.path)}
+                    className="hover:underline hover:text-orange-300 transition-colors flex items-center gap-2 w-full text-left"
                   >
-                    ‹ {item}
-                  </motion.a>
+                    <ChevronRight size={16} /> {item.name}
+                  </button>
                 </motion.li>
               ))}
             </motion.ul>
+          </motion.div>
+
+          {/* Quick Links - Now in a separate column */}
+          <motion.div variants={fadeIn("up", 0.7)} className="md:col-span-1">
             <motion.h3 
               variants={textVariant(0.4)}
               className="font-semibold text-lg mb-4 border-b border-white/20 pb-2"
@@ -123,23 +148,27 @@ const Footer = () => {
             </motion.h3>
             <motion.ul variants={fadeIn("up", 0.8)} className="space-y-2">
               {[
-                "Contact Us", "Customer Care", "Careers", "FAQs", "Disclaimer", "Privacy Policy"
+                { name: "Contact Us", path: "/pages/customercare" },
+                { name: "Customer Care", path: "/pages/customercare" },
+                { name: "Careers", path: "/pages/maintenance" },
+                { name: "FAQs", path: "/pages/maintenance" },
+                { name: "Disclaimer", path: "/pages/maintenance" },
+                { name: "Privacy Policy", path: "/pages/maintenance" }
               ].map((item, idx) => (
-                <motion.li key={item} variants={fadeIn("up", 0.9 + idx * 0.1)}>
-                  <motion.a
-                    whileHover={{ x: 5 }}
-                    href="#"
-                    className="hover:underline hover:text-orange-300 transition-colors flex items-center"
+                <motion.li key={item.name} variants={fadeIn("up", 0.9 + idx * 0.1)}>
+                  <button
+                    onClick={() => handleNavigation(item.path)}
+                    className="hover:underline hover:text-orange-300 transition-colors flex items-center gap-2 w-full text-left"
                   >
-                    ‹ {item}
-                  </motion.a>
+                    <ChevronRight size={16} /> {item.name}
+                  </button>
                 </motion.li>
               ))}
             </motion.ul>
           </motion.div>
 
           {/* Contact Info */}
-          <motion.div variants={fadeIn("left", 0.4)}>
+          <motion.div variants={fadeIn("left", 0.4)} className="md:col-span-1">
             <motion.h3
               variants={textVariant(0.5)}
               className="font-semibold text-lg mb-4 border-b border-white/20 pb-2"

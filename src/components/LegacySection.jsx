@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 const LegacySection = () => {
   return (
@@ -17,15 +18,20 @@ const LegacySection = () => {
         <motion.div variants={textVariant(0.3)}>
           <motion.h2
             variants={fadeIn("up", 0.4)}
-            className="text-lg md:text-xl text-orange-500 font-semibold mb-3"
+            className="text-lg md:text-xl text-orange-500 font-semibold mb-3 flex items-center justify-center gap-3"
           >
-            ← Built on a Legacy of Strength →
+            <ArrowLeft className="w-5 h-5 md:w-6 md:h-6 text-orange-500" />
+            Built on a Legacy of Strength
+            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 text-orange-500" />
           </motion.h2>
+
           <motion.p
             variants={fadeIn("up", 0.5)}
             className="text-gray-700 max-w-3xl mx-auto mb-12 text-sm md:text-base leading-relaxed"
           >
-            Purbanchal Cement fuels growth as part of the dynamic Maithan Group family, alongside Maithan Steels, Alloys, and Ceramics, delivering excellence that builds tomorrow.
+            Purbanchal Cement fuels growth as part of the dynamic Maithan Group
+            family, alongside Maithan Steels, Alloys, and Ceramics, delivering
+            excellence that builds tomorrow.
           </motion.p>
         </motion.div>
 

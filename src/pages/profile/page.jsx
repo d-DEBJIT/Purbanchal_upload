@@ -24,8 +24,8 @@ const ProfilePage = () => {
       bio: "Industry veteran with 25+ years experience in manufacturing and operations",
       image: "/Vedant-Agarwal.jpg",
       social: {
-        linkedin: "#",
-        twitter: "#"
+        linkedin: "https://in.linkedin.com/in/vedant212",
+        // twitter: "#"
       }
     },
   ];

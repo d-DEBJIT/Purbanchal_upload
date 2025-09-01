@@ -1,6 +1,7 @@
 /* global __IMAGE_BASE_PATH__ */
-import React, { useEffect } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
+import { ArrowLeft, ArrowRight } from "lucide-react"; // ✅ Lucide icons
 
 const WhyChooseUs = () => {
   const [ref, inView] = useInView({
@@ -22,13 +23,17 @@ const WhyChooseUs = () => {
             inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3">
-            ← Why Choose Us? →
+          <h2 className="flex justify-center items-center gap-3 text-lg md:text-2xl text-orange-500 font-semibold mb-3">
+            <ArrowLeft className="w-5 h-5" /> {/* Left Icon */}
+            Why Choose Us?
+            <ArrowRight className="w-5 h-5" /> {/* Right Icon */}
           </h2>
           <p>
             <span className="text-gray-700 text-lg max-w-3xl mx-auto leading-relaxed">
               Purbanchal Cement is the foundation of India's growth, trusted by
-              builders big and small for its unmatched  <span class="font-bold">quality, consistency</span> and  <span class="font-bold">reliability</span>.
+              builders big and small for its unmatched{" "}
+              <span className="font-bold">quality, consistency</span> and{" "}
+              <span className="font-bold">reliability</span>.
             </span>
           </p>
         </div>
@@ -110,9 +115,7 @@ const FeatureCard = ({ icon, title, desc, index, inView }) => {
   return (
     <div
       className={`flex items-start gap-4 transition-all duration-700 ease-out ${
-        inView
-          ? "opacity-100 translate-x-0"
-          : "opacity-0 -translate-x-5"
+        inView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-5"
       }`}
       style={{ transitionDelay: `${index * 100 + 300}ms` }}
     >

@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { ArrowLeft, ArrowRight, ArrowDown } from "lucide-react"; // ✅ Lucide icons
 
 const processSteps = [
   {
@@ -89,15 +90,20 @@ const ManufacturingProcess = () => {
           variants={container}
         >
           <motion.h2
-            className="text-lg md:text-2xl text-orange-500 font-semibold mb-3"
+            className="text-lg md:text-2xl text-orange-500 font-semibold mb-3 flex items-center justify-center gap-2"
             variants={item}
           >
-            ← From Raw To Rock Solid →
+            <ArrowLeft className="w-5 h-5 text-orange-500" />
+            From Raw To Rock Solid
+            <ArrowRight className="w-5 h-5 text-orange-500" />
           </motion.h2>
-          <motion.p className="text-gray-700 text-base md:text-lg max-w-3xl mx-auto" variants={item}>
-            Starting with premium raw materials and progressing through precise blending, processing,
-            and testing, our manufacturing ensures every bag of cement delivers strength, durability,
-            and trust.
+          <motion.p
+            className="text-gray-700 text-base md:text-lg max-w-3xl mx-auto"
+            variants={item}
+          >
+            Starting with premium raw materials and progressing through precise
+            blending, processing, and testing, our manufacturing ensures every
+            bag of cement delivers strength, durability, and trust.
           </motion.p>
         </motion.div>
 
@@ -129,44 +135,27 @@ const ManufacturingProcess = () => {
                       whileHover={{ scale: 1.1 }}
                     />
                   </div>
-                  
+
                   {/* Title */}
                   <h3 className="font-semibold text-gray-800 text-center mb-2">
                     {step.title}
                   </h3>
-                  
+
                   {/* Description */}
                   <p className="text-xs text-gray-600 text-center leading-tight">
                     {step.description}
                   </p>
-                  
+
                   {/* Connecting arrow (except last item) */}
                   {index < processSteps.length - 1 && (
                     <motion.div
-                      className="absolute top-20 right-[-60px]"
+                      className="absolute top-20 right-[-40px]"
                       variants={arrow}
                       initial="hidden"
                       animate="visible"
                       transition={{ delay: index * 0.2 + 0.4 }}
                     >
-                      <svg
-                        width="60"
-                        height="16"
-                        viewBox="0 0 60 16"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M0 8H58"
-                          stroke="#F97316"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M50 1L58 8L50 15"
-                          stroke="#F97316"
-                          strokeWidth="2"
-                        />
-                      </svg>
+                      <ArrowRight className="w-6 h-6 text-orange-500" />
                     </motion.div>
                   )}
                 </motion.div>
@@ -193,7 +182,7 @@ const ManufacturingProcess = () => {
                 <div className="bg-orange-500 text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-1">
                   {index + 1}
                 </div>
-                
+
                 {/* Content */}
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-1">
@@ -206,34 +195,15 @@ const ManufacturingProcess = () => {
                       {step.title}
                     </h3>
                   </div>
-                  <p className="text-sm text-gray-600">
-                    {step.description}
-                  </p>
-                  
+                  <p className="text-sm text-gray-600">{step.description}</p>
+
                   {/* Arrow indicator (except last item) */}
                   {index < processSteps.length - 1 && (
                     <motion.div
                       className="flex justify-center mt-2"
                       variants={arrow}
                     >
-                      <svg
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          d="M12 5V19"
-                          stroke="#F97316"
-                          strokeWidth="2"
-                        />
-                        <path
-                          d="M19 12L12 19L5 12"
-                          stroke="#F97316"
-                          strokeWidth="2"
-                        />
-                      </svg>
+                      <ArrowDown className="w-6 h-6 text-orange-500" />
                     </motion.div>
                   )}
                 </div>

@@ -21,7 +21,7 @@ const NewsCard = ({ title, summary, date, category, imageUrl }) => {
         </h3>
         <p className="text-gray-600 mb-4">{summary}</p>
         <button className="text-blue-600 hover:text-blue-800 font-medium transition-colors">
-          Read more →
+          Read more ➝
         </button>
       </div>
     </div>

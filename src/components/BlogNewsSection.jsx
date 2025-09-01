@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { motion } from 'framer-motion';
-import { Calendar, Clock, Heart, MessageCircle, Tag } from 'lucide-react';
+import { Calendar, Clock, Heart, MessageCircle, Tag, ArrowLeft, ArrowRight } from 'lucide-react';
 
 const BlogNewsSection = () => {
   const navigate = useNavigate();
@@ -83,8 +83,10 @@ const BlogNewsSection = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3">
-            ← Purbanchal Cement →
+          <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3 flex items-center justify-center gap-2">
+            <ArrowLeft size={18} />
+            Purbanchal Cement
+            <ArrowRight size={18} />
           </h2>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
             Latest Blogs and News
@@ -283,7 +285,7 @@ const BlogNewsSection = () => {
         </div>
 
         {/* View All */}
-        <motion.div 
+         <motion.div 
           className="text-center mt-12" 
           initial={{ opacity: 0 }} 
           whileInView={{ opacity: 1 }} 
