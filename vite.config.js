@@ -3,7 +3,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-const BASE_PATH = "/lalu";
+const BASE_PATH = "/purbanchal";
 const IMAGE_BASE_PATH = `${BASE_PATH}`;
 
 export default defineConfig({
