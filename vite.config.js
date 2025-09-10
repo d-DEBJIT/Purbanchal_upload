@@ -3,13 +3,13 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 
-// Remove BASE_PATH
-const IMAGE_BASE_PATH = "";
+const BASE_PATH = "/lalu";
+const IMAGE_BASE_PATH = `${BASE_PATH}`;
 
 export default defineConfig({
-  base: "", // ✅ root path
+  base: BASE_PATH,
   define: {
-    __IMAGE_BASE_PATH__: JSON.stringify(IMAGE_BASE_PATH),
+    __IMAGE_BASE_PATH__: JSON.stringify(IMAGE_BASE_PATH), // 👈 Make it globally accessible
   },
   plugins: [react(), tailwindcss()],
 });
