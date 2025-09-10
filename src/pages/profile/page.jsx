@@ -12,6 +12,9 @@ import {
   ChevronDown
 } from 'lucide-react';
 
+const IMAGE_BASE = __IMAGE_BASE_PATH__;
+
+
 const ProfilePage = () => {
   const [expandedMission, setExpandedMission] = useState(false);
   const [expandedVision, setExpandedVision] = useState(false);
@@ -22,7 +25,7 @@ const ProfilePage = () => {
       name: "Vedant Agarwal",
       position: "Director at Purbanchal Cement Limited, Maithan Group",
       bio: "Industry veteran with 25+ years experience in manufacturing and operations",
-      image: "/Vedant-Agarwal.jpg",
+      image: `${IMAGE_BASE}/Vedant-Agarwal.jpg`,
       social: {
         linkedin: "https://in.linkedin.com/in/vedant212",
         // twitter: "#"
@@ -95,7 +98,7 @@ const ProfilePage = () => {
             </div>
             <div className="relative rounded-xl overflow-hidden shadow-xl h-96">
               <img 
-                src="/facility.png" 
+                src={`${IMAGE_BASE}/facility.png`} 
                 alt="Our manufacturing facility"
                 className="w-full h-full object-cover"
               />

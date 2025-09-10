@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Factory, Settings, Shield, CheckCircle, Layers, Clock, Award, ArrowRight, ChevronUp } from 'lucide-react';
 
+const IMAGE_BASE = __IMAGE_BASE_PATH__;
+
 // Reusable CTA Button
 const CTAButton = ({ text }) => (
   <motion.button
@@ -47,7 +49,7 @@ const ManufacturingProcessPage = () => {
         "Quality inspection and testing",
         "Precision measurement and preparation"
       ],
-      image: "/raw-materials.jpg"
+      image:  `${IMAGE_BASE}/raw-materials.jpg`
     },
     {
       id: 2,
@@ -59,7 +61,7 @@ const ManufacturingProcessPage = () => {
         "Automated mixing process",
         "Real-time quality monitoring"
       ],
-      image: "/mixing.jpg"
+      image: `${IMAGE_BASE}/mixing.jpg`
     },
     {
       id: 3,
@@ -71,7 +73,7 @@ const ManufacturingProcessPage = () => {
         "Precision temperature control",
         "Automated demolding"
       ],
-      image: "/molding.jpg"
+      image:  `${IMAGE_BASE}/molding.jpg`
     },
     {
       id: 4,
@@ -83,7 +85,7 @@ const ManufacturingProcessPage = () => {
         "Humidity regulation",
         "Automated curing cycles"
       ],
-      image: "/curing.jpg"
+      image:  `${IMAGE_BASE}/curing.jpg`
     },
     {
       id: 5,
@@ -95,22 +97,26 @@ const ManufacturingProcessPage = () => {
         "Manual inspection points",
         "Performance testing"
       ],
-      image: "/inspection.jpg"
+      image:  `${IMAGE_BASE}/inspection.jpg`
     },
   ];
 
   return (
     <div className="bg-white min-h-screen font-sans">
       {/* Hero Section */}
-<div className="relative h-96 w-full overflow-hidden">
-  {/* Background Image */}
-  <div
-    className="absolute inset-0 bg-cover bg-center"
-    style={{ backgroundImage: "url('/bg-manufacturing.jpg')" }}
-  />
+      <div className="relative h-96 w-full overflow-hidden">
+
+      <div className="absolute inset-0">
+        <img
+          src={`${IMAGE_BASE}/bg-manufacturing.jpg`}
+          alt="Company News"
+          className="absolute inset-0 bg-cover bg-center"
+        />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/0" />
+        </div>
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/0" />
+  {/* <div className="absolute inset-0 bg-gradient-to-b from-black/80 to-black/0" /> */}
 
   {/* Content */}
   <div className="relative z-10 h-full flex items-center">
