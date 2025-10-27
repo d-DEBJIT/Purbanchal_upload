@@ -219,7 +219,6 @@ const BlogNewsSection = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent p-5 flex items-end">
                   <div>
-                    <span className="text-xs font-medium text-[#3366bb] mb-1 block">Today's Featured</span>
                     <h3 className="text-white text-xl font-bold">Tech & Safety Drive Growth</h3>
                     <div className="flex gap-2 text-xs text-white/80 mt-2">
                       <span>{formatDate('2024-07-15')}</span>

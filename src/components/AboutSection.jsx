@@ -130,7 +130,7 @@ every structure in <span class="font-bold">Northeast India and beyond</span>.
             variants={imageVariants}
           >
             <div className="relative">
-              <motion.div 
+              {/* <motion.div 
                 className="absolute inset-0 bg-gradient-to-br from-orange-400 to-orange-500 rounded-2xl transform rotate-2 scale-105"
                 animate={{ rotate: [2, -1, 2] }}
                 transition={{
@@ -139,7 +139,7 @@ every structure in <span class="font-bold">Northeast India and beyond</span>.
                   repeatType: "reverse",
                   ease: "linear",
                 }}
-              />
+              /> */}
               
               <motion.div 
                 className="relative bg-white rounded-2xl overflow-hidden shadow-xl"
@@ -147,7 +147,7 @@ every structure in <span class="font-bold">Northeast India and beyond</span>.
                 transition={{ duration: 0.3 }}
               >
                 <img 
-                  src={`${__IMAGE_BASE_PATH__}/cement-factory.png`} 
+                  src={`${__IMAGE_BASE_PATH__}/etienne-girardet-h2cgYCzedS0-unsplash.jpg`} 
                   alt="Industrial Cement Manufacturing Plant" 
                   className="w-full h-96 lg:h-[500px] object-cover"
                 />
@@ -157,7 +157,7 @@ every structure in <span class="font-bold">Northeast India and beyond</span>.
               className="text-center mt-4 text-gray-600 italic"
               variants={itemVariants}
             >
-              Our Integrated Manufacturing Unit, Sonapur, Assam
+              {/* Our Integrated Manufacturing Unit, Sonapur, Assam */}
             </motion.p>
           </motion.div>
         </motion.div>
