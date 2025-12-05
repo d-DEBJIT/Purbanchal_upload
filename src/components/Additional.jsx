@@ -43,17 +43,17 @@ const Addition = () => {
             <div>
               <p className="text-sm text-orange-500 font-semibold mb-1 flex items-center gap-2">
                 <span className="w-2 h-2 bg-orange-500 rounded-full"></span>
-                The Strength You Trust. The Name You Know.
+                The Strength You Trust. The Name You Know: Surya Cement.
                 <span className="w-2 h-0.5 bg-orange-500 inline-block"></span>
               </p>
               <h1 className="text-3xl md:text-4xl font-bold text-[#3366BB] mb-1">
-                Purbanchal Cement Limited
+                Surya Cement Limited
               </h1>
               <h2 className="text-lg text-orange-600 font-semibold mb-2">
-                Bharosa Wahi, Pehchan Nai!
+                Same Quality, New Identity!
               </h2>
               <p className="text-gray-600 max-w-xl mb-3">
-                We deliver lasting strength and unmatched versatility adapting seamlessly to all construction needs.
+                We deliver lasting strength and unmatched versatility, adapting seamlessly to all construction needs. 
               </p>
               <p className="text-gray-600 max-w-xl mb-6">
                 From high-rises to homes, every mix of our cement stands for<span className="font-bold"> durability, reliability,</span> and <span className="font-bold">trust</span>.

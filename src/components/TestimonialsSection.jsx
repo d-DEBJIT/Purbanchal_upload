@@ -8,14 +8,14 @@ const Testimonials = () => {
   const testimonials = [
     {
       quote:
-        "For over 15 years, Purbanchal Cement has been our trusted choice for all residential projects in Guwahati. Their quality and consistency make every project a success.",
+        "For over 15 years, Surya Cement (formerly Purbanchal Cement) has been our trusted choice for all residential projects in Guwahati. Their quality and consistency continue to make every project a success.",
       name: "Mr. Manoj Jalan",
       position: "Director, Protech Group",
       logo: "protech-logo (1).png",
     },
     {
       quote:
-        "Surya Gold cement delivers unmatched reliability for our construction projects. Our decade-long partnership with Purbanchal Cement is built on trust and proven quality.",
+        "Surya Gold cement delivers unmatched reliability for our construction projects. Our decade-long partnership with Surya Cement is built on trust and proven quality.",
       name: "Mr. Amarchand Kalani",
       position: "Owner, Uttrayan Group",
       logo: "uttarayan-logo.png",
@@ -47,8 +47,7 @@ const Testimonials = () => {
             <ArrowRight className="w-5 h-5 text-orange-500" /> {/* ✅ replaced */}
           </h2>
           <p className="text-gray-600 text-lg max-w-3xl mx-auto leading-relaxed">
-            Hear from our long-standing partners who've built success with
-            Purbanchal Cement
+            Hear from our long-standing partners who've built success with the consistent quality of Surya Cement.
           </p>
         </div>
 

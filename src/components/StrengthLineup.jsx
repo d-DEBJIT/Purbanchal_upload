@@ -10,20 +10,23 @@ const StrengthLineup = () => {
   const products = [
     {
       id: 1,
-      name: "Surya Concretec Cement",
-      description: "Super Dhalai PPC cement engineered for superior slab casting and long-term durability. BIS Certified | 50 kg | Best for roofs and foundations",
-      image: "left.png"
+      name: "Surya Gold PPC Cement",
+      description: "High-performance Portland Pozzolana Cement engineered for superior durability and a smooth finish. Ideal for all-weather construction with enhanced water-resistant properties.",
+      features: "High Durability | Smooth Finish | Water-Resistant | BIS Compliant",
+      image: "middle.png"
     },
     {
       id: 2,
-      name: "Surya Gold PPC Cement",
-      description: "High-performance Portland Pozzolana Cement ideal for all weather construction. Smooth finish | Water-resistant | BIS Compliant",
-      image: "middle.png"
+      name: "Surya Concretec Cement",
+      description: "A specialized PPC cement for Super Dhalai. Engineered for superior slab casting, ensuring long-term structural integrity and optimal resistance for roofs and foundations.",
+      features: "Superior Slab Casting | Long-Term Durability | 50 kg | BIS Certified",
+      image: "left.png"
     },
     {
       id: 3,
       name: "Surya Gold OPC Cement",
-      description: "Ordinary Portland Cement (Grade 53) for fast-setting and strong structures. Ideal for RCC work | High strength | Rapid development",
+      description: "Ordinary Portland Cement delivering fast-setting action and high initial strength development. The definitive choice for critical RCC work and structures requiring rapid strength.",
+      features: "Rapid Development | High Early Strength | Ideal for RCC Work | Grade 53",
       image: "right.png"
     }
   ];
@@ -136,7 +139,7 @@ const StrengthLineup = () => {
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '0 40px',
+    padding: isMobile ? '0 20px' : '0 60px', // Reduced padding on mobile
     boxSizing: 'border-box'
   };
 
@@ -146,7 +149,7 @@ const StrengthLineup = () => {
     alignItems: 'flex-end',
     justifyContent: 'center',
     width: '100%',
-    maxHeight: '60%',
+    maxHeight: '55%', // Reduced slightly
     marginBottom: '20px'
   };
 
@@ -166,11 +169,15 @@ const StrengthLineup = () => {
 
   const infoStyle = {
     textAlign: 'center',
-    maxWidth: '500px',
+    maxWidth: isMobile ? '100%' : '700px', // Increased from 500px
     opacity: 0,
     transform: 'translateY(20px)',
     transition: 'all 0.5s ease',
-    height: '40%'
+    height: '45%', // Increased height
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    width: '100%'
   };
 
   const activeInfoStyle = {
@@ -186,9 +193,17 @@ const StrengthLineup = () => {
   };
 
   const productDescStyle = {
-    fontSize: isMobile ? '0.9rem' : '1rem',
+    fontSize: isMobile ? '0.95rem' : '1.05rem', // Slightly larger
     color: '#7f8c8d',
-    lineHeight: '1.6'
+    lineHeight: '1.5', // Reduced from 1.6
+    marginBottom: '10px'
+  };
+
+  const featuresStyle = {
+    fontSize: isMobile ? '0.9rem' : '1rem',
+    color: '#2c3e50',
+    fontWeight: '500',
+    lineHeight: '1.4'
   };
 
   const dotsContainerStyle = {
@@ -220,27 +235,27 @@ const StrengthLineup = () => {
     background: 'rgba(255,255,255,0.8)',
     border: 'none',
     borderRadius: '50%',
-    width: '50px',
-    height: '50px',
+    width: isMobile ? '40px' : '50px',
+    height: isMobile ? '40px' : '50px',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     cursor: 'pointer',
     boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
     zIndex: 10,
-    fontSize: '1.5rem',
+    fontSize: isMobile ? '1.2rem' : '1.5rem',
     color: '#2c3e50',
     transition: 'all 0.3s ease'
   };
 
   const prevButtonStyle = {
     ...navButtonStyle,
-    left: '20px'
+    left: isMobile ? '10px' : '20px'
   };
 
   const nextButtonStyle = {
     ...navButtonStyle,
-    right: '20px'
+    right: isMobile ? '10px' : '20px'
   };
 
   const handlePrev = () => {
@@ -273,7 +288,7 @@ const StrengthLineup = () => {
           <span style={underlineStyle}></span>
         </h2>
         <p style={subtitleStyle}>
-          Versatile strength for every build you envision. Premium quality cement solutions for all construction needs.
+          Versatile strength for every build you envision. Premium quality cement solutions from Surya Cement for all construction needs.
         </p>
       </div>
 
@@ -294,6 +309,7 @@ const StrengthLineup = () => {
               <div style={currentSlide === index ? {...infoStyle, ...activeInfoStyle} : infoStyle}>
                 <h3 style={productNameStyle}>{product.name}</h3>
                 <p style={productDescStyle}>{product.description}</p>
+                <p style={featuresStyle}>{product.features}</p>
               </div>
             </div>
           ))}

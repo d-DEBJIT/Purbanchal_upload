@@ -13,11 +13,12 @@ const ProductsPage = () => {
     {
       id: 1,
       name: 'Concrete',
-      description: 'High-quality steel beams for structural applications with superior load-bearing capacity.',      longDescription: 'Purbanchal Cement has been designed to provide quality that lasts a lifetime. Our advanced formulation ensures superior strength and durability for all construction needs.',
+      description: 'The ultimate choice for high-rise structures and heavy-load foundations. Engineered for superior compressive strength, long-term durability, and crack resistance in all structural applications.',
+      longDescription: 'Surya Cement has been engineered to provide unmatched quality that lasts a lifetime. Our advanced formulation ensures superior strength and durability for all critical construction needs, making it the trusted choice for lasting structures.',
       category: 'Premium',
       price: 249.99,
       rating: 4.8,
-      features: ['High quality', 'Long-lasting', 'Innovative technology'],
+      features: ['Uncompromising High Quality ', 'Exceptional Longevity and Durability', 'Advanced Manufacturing Technology'],
       specifications: [
         { name: 'Compressive Strength', value: '53 MPa' },
         { name: 'Setting Time', value: '30-45 minutes' },
@@ -31,11 +32,12 @@ const ProductsPage = () => {
     {
       id: 2,
       name: 'PPC',
-      description: 'Aesthetic and durable metal panels for modern architectural facades and interiors.',      longDescription: 'Purbanchal Supreme Cement is engineered for superior performance across all construction applications. Its unique formulation provides excellent workability and finish.',
+      description: 'A versatile, eco-friendly cement that ensures long-term stability and reduced heat of hydration. Ideal for mass concreting, plastering, and general construction where longevity is key.',
+      longDescription: 'Surya Concretec Cement is engineered for superior, sustainable performance across all construction applications. This unique formulation provides excellent workability, a fine finish, and enhanced durability, making it ideal for large-scale, long-lasting projects.',
       category: 'Premium',
       price: 189.50,
       rating: 4.6,
-      features: ['Best-in-class', 'Versatile', 'High strength'],
+      features: ['Best-in-Class Quality and Consistency', 'High Versatility for all Construction Needs', 'Assured High Compressive Strength'],
       specifications: [
         { name: 'Compressive Strength', value: '43 MPa' },
         { name: 'Setting Time', value: '45-60 minutes' },
@@ -49,11 +51,12 @@ const ProductsPage = () => {
     {
       id: 3,
       name: 'OPC',
-      description: 'Corrosion-resistant piping solutions for industrial fluid transport applications.',      longDescription: 'Purbanchal USP cement is specially formulated to deliver high-strength concrete required for critical structural elements like foundations, columns and slabs.',
+      description: 'Our premium, fast-setting cement, perfect for projects requiring rapid construction and high initial strength. Essential for precast units, high-grade concrete, and specialized civil works.',
+      longDescription: 'Surya Cement’s Ordinary Portland Cement (OPC) is a specialized formulation designed to deliver the highest possible strength concrete required for critical structural elements like foundations, columns, and slabs, where rapid setting is essential.',
       category: 'Specialized',
       price: 329.99,
       rating: 4.9,
-      features: ['High strength', 'Specialized formula', 'Foundations & slabs'],
+      features: ['Ultra-High Initial and Final Strength', 'Precision-Engineered, Specialized Formula', 'Ideal for Critical Structural Applications'],
       specifications: [
         { name: 'Compressive Strength', value: '63 MPa' },
         { name: 'Setting Time', value: '25-40 minutes' },
@@ -67,11 +70,12 @@ const ProductsPage = () => {
     {
       id: 4,
       name: 'Fresh Bulk Cement',
-      description: 'Tailored metal solutions designed to meet your specific project requirements.',      longDescription: 'Konark Cement has been a market leader since 1952, known for its consistent quality and reliability. Ideal for all general construction purposes.',
+      description: 'Tailored, high-quality cement delivered ready-to-use for time-critical, large-scale projects. Guaranteed consistency and mix design compliance for specialized on-site requirements.',
+      longDescription: 'Surya Cement delivers specialized Fresh Bulk Cement and Ready Mix solutions, ensuring consistent quality and reliability directly to your site. Our tailored formulations are ideal for all high-volume, time-sensitive general construction and specialized infrastructure purposes.',
       category: 'Classic',
       price: 199.99,
       rating: 4.7,
-      features: ['Trusted brand', 'Since 1952', 'High quality'],
+      features: ['Guaranteed Consistency and Quality Control', 'Timely, Reliable On-Site Delivery', 'Tailored Mix Designs for Project Specifications'],
       specifications: [
         { name: 'Compressive Strength', value: '33 MPa' },
         { name: 'Setting Time', value: '60-90 minutes' },
@@ -267,7 +271,7 @@ const ProductsPage = () => {
                 </div>
                 <h4 className="font-bold text-lg mb-2">Quality Assurance</h4>
                 <p className="text-gray-600">
-                  Every product undergoes rigorous testing to meet industry standards and your expectations.
+                  Every product undergoes rigorous, multi-stage testing to meet and surpass global industry standards, guaranteeing the quality you expect from Surya Cement.
                 </p>
               </div>
               <div className="text-center">
@@ -276,7 +280,7 @@ const ProductsPage = () => {
                 </div>
                 <h4 className="font-bold text-lg mb-2">Durability Guaranteed</h4>
                 <p className="text-gray-600">
-                  Our materials are selected for their strength and longevity, ensuring lasting performance.
+                  Our raw materials are meticulously selected for their inherent strength and longevity, ensuring that every structure built with our products delivers lasting, superior performance.
                 </p>
               </div>
               <div className="text-center">
@@ -285,7 +289,7 @@ const ProductsPage = () => {
                 </div>
                 <h4 className="font-bold text-lg mb-2">Reliable Delivery</h4>
                 <p className="text-gray-600">
-                  On-time shipments with careful packaging to ensure your products arrive in perfect condition.
+                  We prioritize on-time shipments with robust and careful packaging, ensuring your products arrive in perfect condition and your project timeline remains uninterrupted.
                 </p>
               </div>
             </div>
@@ -303,8 +307,7 @@ const ProductsPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h3 className="text-2xl font-bold mb-4">Need Custom Concrete Solutions?</h3>
             <p className="text-blue-100 mb-6 leading-relaxed">
-              Our construction team specializes in delivering custom concrete solutions tailored to your exact needs.
-              From unique structural designs to specialized concrete mixes, we turn your vision into a durable reality.
+              Surya Cement’s specialized engineering experts work with you to deliver custom concrete solutions tailored to your exact needs. From unique structural designs to specialized concrete mixes, we partner with you to turn your vision into a durable, concrete reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-6 py-3 bg-white text-[#3366BB] font-semibold hover:bg-gray-100 transition-all rounded-lg">

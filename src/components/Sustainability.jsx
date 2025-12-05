@@ -27,7 +27,7 @@ const SustainabilitySection = () => {
       title: "Environment",
       img: `${__IMAGE_BASE_PATH__}/environment.png`,
       alt: "Environment",
-      shortText: "Reducing carbon footprint through sustainable manufacturing",
+      shortText: "Reducing our carbon footprint through sustainable manufacturing practices and a firm focus on conserving natural resources.",
       stats: [
         "40% energy from renewable sources",
         "100K+ trees planted",
@@ -40,7 +40,7 @@ const SustainabilitySection = () => {
       title: "Social",
       img: `${__IMAGE_BASE_PATH__}/social.png`,
       alt: "Social",
-      shortText: "Empowering communities through inclusive growth",
+      shortText: "Empowering local communities and fostering inclusive growth through skill development, infrastructure support, and focused social initiatives.",
       stats: [
         "5,000+ jobs created locally",
         "25 schools supported",
@@ -53,7 +53,7 @@ const SustainabilitySection = () => {
       title: "Governance",
       img: `${__IMAGE_BASE_PATH__}/governance.png`,
       alt: "Governance",
-      shortText: "Ethical leadership with transparent business practices",
+      shortText: "Upholding ethical leadership and transparent business practices across all operations, ensuring accountability to all stakeholders.",
       stats: [
         "100% compliance with regulations",
         "50+ sustainability audits",
@@ -89,17 +89,16 @@ const SustainabilitySection = () => {
           viewport={{ once: true }}
         >
           <h2 className="flex justify-center items-center gap-2 text-lg md:text-2xl text-orange-500 font-semibold mb-3">
-            <ArrowLeft size={20} />
-            Cementing ESG Commitments
-            <ArrowRight size={20} />
+            {/* <ArrowLeft size={20} /> */}
+            SURYA CEMENT: CEMENTING OUR ESG COMMITMENTS
+            {/* <ArrowRight size={20} /> */}
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-            We are committed to{" "}
+            At Surya Cement, we are deeply committed to {" "}
             <span className="font-bold">
               eco-friendly practices, energy-efficient manufacturing,
             </span>{" "}
-            and <span className="font-bold">community well-being</span> all to
-            build a greener, safer, and more sustainable tomorrow.
+            and <span className="font-bold">community well-being.</span> This integrated focus ensures we build a greener, safer, and more sustainable tomorrow for everyone.
           </p>
         </motion.div>
 

@@ -129,8 +129,7 @@ const ProjectsSection = () => {
             <ArrowLeft size={18} /> Our Projects <ArrowRight size={18} />
           </h2>
           <p className="text-white text-lg max-w-3xl mx-auto leading-relaxed">
-            Explore our journey through impactful infrastructure and real estate
-            projects that reflect strength, quality, and long-term performance.
+            Explore our journey through impactful infrastructure and real estate projects that reflect the strength, quality, and long-term performance built using Surya Cement. Each project tells a story of trust built to last.
           </p>
           <p className="text-white/80 mt-2">
             Each project tells a story of trust built to last.

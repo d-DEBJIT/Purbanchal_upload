@@ -28,7 +28,7 @@ const ConstructionCTA = () => {
               <p className="text-white/90 leading-relaxed">
                 No delays. No compromises.
                 <br />
-                With Purbanchal Cement, your construction milestones
+                With Surya Cement, your construction milestones
                 are achieved with unmatched quality and speed.
               </p>
               <div className="pt-2">

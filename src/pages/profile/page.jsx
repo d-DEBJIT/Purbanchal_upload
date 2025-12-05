@@ -23,7 +23,7 @@ const ProfilePage = () => {
     {
       id: 1,
       name: "Vedant Agarwal",
-      position: "Director at Purbanchal Cement Limited, Maithan Group",
+      position: "Director at Surya Cement Limited, Maithan Group",
       bio: "Industry veteran with 25+ years experience in manufacturing and operations",
       image: `${IMAGE_BASE}/Vedant-Agarwal.jpg`,
       social: {
@@ -34,11 +34,11 @@ const ProfilePage = () => {
   ];
 
   const milestones = [
-    { year: "2003", event: "Company promoted by founders" },
-    { year: "2008", event: "Plant operational; brands launched" },
-    { year: "2018", event: "Environment initiatives: plantation drive & clean-up campaigns" },
-    { year: "2022", event: "₹200 Cr expansion plan, capacity doubling, new grinding unit proposed" },
-    { year: "2023", event: "Expansion drive ongoing, capacity ramp-up plans reiterated" }
+    { year: "2003", event: "Company promoted by founders, laying the groundwork for a vision of quality manufacturing." },
+    { year: "2008", event: "Manufacturing plant becomes fully operational; initial high-quality brands launched in the market." },
+    { year: "2018", event: "Commitment to sustainability deepened with major environment initiatives, plantation drives, and clean-up campaigns." },
+    { year: "2022", event: "Accelerated growth plans proposed: ₹200 Cr expansion plan, capacity doubling, and a new grinding unit sanctioned." },
+    { year: "2023", event: "Expansion drive ongoing, capacity ramp-up plans reiterated to meet growing regional demand." }
   ];
 
   return (
@@ -123,7 +123,7 @@ const ProfilePage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
                   <p className="text-gray-600">
-                    To deliver superior manufacturing solutions through innovation, quality, and operational excellence.
+                    To deliver superior, sustainable manufacturing solutions through innovation, uncompromising quality, and operational excellence, building a stronger future for all our stakeholders.
                   </p>
                   {expandedMission && (
                     <motion.div
@@ -160,7 +160,7 @@ const ProfilePage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
                   <p className="text-gray-600">
-                    To be recognized as a global leader in innovative and sustainable manufacturing.
+                    To be recognized as the market leader in Eastern India and a global benchmark for innovative and sustainable cement manufacturing under the Surya Cement brand.
                   </p>
                   {expandedVision && (
                     <motion.div

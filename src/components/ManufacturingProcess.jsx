@@ -7,32 +7,32 @@ import { ArrowLeft, ArrowRight, ArrowDown } from "lucide-react"; // ✅ Lucide i
 const processSteps = [
   {
     title: "Quarry",
-    description: "Excavation of high-quality limestone and raw materials",
+    description: "Careful excavation of high-quality limestone and essential raw materials, adhering to stringent material standards.",
     image: `${__IMAGE_BASE_PATH__}/Quarry.png`,
   },
   {
     title: "Crusher",
-    description: "Crushing and sizing for optimal material uniformity",
+    description: "Primary crushing and sizing for optimal material uniformity, ensuring efficient and high-quality processing downstream.",
     image: `${__IMAGE_BASE_PATH__}/Crusher.png`,
   },
   {
     title: "Raw Mill",
-    description: "Blending and grinding of raw components for perfect mix",
+    description: "Precision blending and grinding of raw components to achieve the perfect chemical mix and consistent fineness.",
     image: `${__IMAGE_BASE_PATH__}/Rawmil to prehitting.png`,
   },
   {
     title: "Preheating & Rotary Kiln",
-    description: "High-temperature processing for clinker formation",
+    description: "Advanced, high-temperature processing to achieve perfect clinker formation, which is the heart of cement strength.",
     image: `${__IMAGE_BASE_PATH__}/Group 111.png`,
   },
   {
     title: "Clinker Storage & Finish Grinding",
-    description: "Cooling, storing, and grinding into fine cement powder",
+    description: "Controlled cooling, storage, and final ultra-fine grinding into the high-performance cement powder you rely on.",
     image: `${__IMAGE_BASE_PATH__}/kilner storage to finish griding.png`,
   },
   {
     title: "Dispatch",
-    description: "Packed and transported with care — ready for delivery",
+    description: "Packed and transported with care, using efficient logistics to ensure fresh, timely delivery—ready for your project.",
     image: `${__IMAGE_BASE_PATH__}/Dispatch.png`,
   },
 ];
@@ -94,16 +94,14 @@ const ManufacturingProcess = () => {
             variants={item}
           >
             <ArrowLeft className="w-5 h-5 text-orange-500" />
-            From Raw To Rock Solid
+            From RAW TO ROCK SOLID: PRECISION IN EVERY STEP
             <ArrowRight className="w-5 h-5 text-orange-500" />
           </motion.h2>
           <motion.p
             className="text-gray-700 text-base md:text-lg max-w-3xl mx-auto"
             variants={item}
           >
-            Starting with premium raw materials and progressing through precise
-            blending, processing, and testing, our manufacturing ensures every
-            bag of cement delivers strength, durability, and trust.
+            Starting with premium raw materials and progressing through precise blending, advanced processing, and rigorous testing, our manufacturing ensures every bag of Surya Cement delivers superior strength, durability, and trust.
           </motion.p>
         </motion.div>
 

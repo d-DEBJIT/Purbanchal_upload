@@ -60,18 +60,19 @@ const HeroSection = () => {
 
       {/* Tagline */}
       <div className="absolute z-20 flex items-center bottom-30 right-0 justify-end px-6 sm:pr-12 md:pr-36">
-        <div className="text-right">
-          <h1 className="text-3xl sm:text-3xl font-bold text-orange-700 mb-1 drop-shadow-lg">
-            More Value
-          </h1>
-          <h1 className="text-6xl sm:text-6xl font-bold text-white mb-1 drop-shadow-lg">
-            Less Waste
-          </h1>
-          <h2 className="text-3xl sm:text-3xl font-semibold italic text-white drop-shadow-lg">
-            The Maithan Way
-          </h2>
-        </div>
-      </div>
+  <div className="max-w-7xl w-full text-right">
+    <h1 className="text-3xl sm:text-3xl font-bold text-orange-700 mb-1 drop-shadow-lg">
+      More Value
+    </h1>
+    <h1 className="text-6xl sm:text-6xl font-bold text-white mb-1 drop-shadow-lg">
+      Building a Stronger Tomorrow. The Surya Way.
+    </h1>
+    <h2 className="text-3xl sm:text-3xl font-semibold italic text-white drop-shadow-lg">
+      The trusted legacy of Maithan, rebranded for a new era of excellence.
+    </h2>
+  </div>
+</div>
+
     </section>
   );
 };

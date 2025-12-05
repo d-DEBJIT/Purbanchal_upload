@@ -42,60 +42,60 @@ const ManufacturingProcessPage = () => {
     {
       id: 1,
       title: "Raw Material Preparation",
-      description: "High-quality raw materials are carefully selected and prepared for production.",
+      description: "At Surya Cement, high-quality raw materials are meticulously selected and prepared, forming the essential base for our premium products.",
       icon: <Layers size={48} className="text-orange-600" />,
       steps: [
-        "Material sourcing from certified suppliers",
-        "Quality inspection and testing",
-        "Precision measurement and preparation"
+        "Material sourcing from certified and sustainable suppliers.",
+        "Rigorous quality inspection and testing protocols.",
+        "Precision measurement and preparation for optimal blend consistency."
       ],
       image:  `${IMAGE_BASE}/raw-materials.jpg`
     },
     {
       id: 2,
       title: "Precision Mixing",
-      description: "Advanced computerized mixing ensures perfect consistency and composition.",
+      description: "Advanced computerized mixing ensures perfect consistency and composition, eliminating variability for a superior and reliable final product.",
       icon: <Settings size={48} className="text-orange-600" />,
       steps: [
-        "Computer-controlled batching",
-        "Automated mixing process",
-        "Real-time quality monitoring"
+        "Computer-controlled batching for exact material ratios.",
+        "Fully automated mixing process for homogeneous blend quality",
+        "Real-time quality monitoring ensuring continuous adherence to standards."
       ],
       image: `${IMAGE_BASE}/mixing.jpg`
     },
     {
       id: 3,
       title: "Molding & Forming",
-      description: "State-of-the-art molding technology creates products with exact specifications.",
+      description: "State-of-the-art molding technology is utilized to create products with exact specifications, maintaining the integrity and performance standards of Surya Cement.",
       icon: <Factory size={48} className="text-orange-600" />,
       steps: [
-        "High-pressure forming",
-        "Precision temperature control",
-        "Automated demolding"
+        "High-pressure forming for dense, consistent material structure.",
+        "Precision temperature control for optimal chemical reaction.",
+        "Automated demolding ensuring zero compromise on product finish and shape."
       ],
       image:  `${IMAGE_BASE}/molding.jpg`
     },
     {
       id: 4,
       title: "Curing & Drying",
-      description: "Controlled environment curing ensures optimal strength and durability.",
+      description: "A controlled environment curing process is strictly maintained to ensure optimal final strength and maximum durability, delivering a product engineered for lasting performance.",
       icon: <Clock size={48} className="text-orange-600" />,
       steps: [
-        "Temperature-controlled chambers",
-        "Humidity regulation",
-        "Automated curing cycles"
+        "Temperature-controlled chambers guarantee ideal conditions.",
+        "Precise humidity regulation prevents early-stage degradation.",
+        "Automated curing cycles ensure consistency across every batch."
       ],
       image:  `${IMAGE_BASE}/curing.jpg`
     },
     {
       id: 5,
       title: "Quality Inspection",
-      description: "Rigorous testing at every stage guarantees product excellence.",
+      description: "Rigorous, multi-point testing is conducted at every stage of production, blending automated systems with expert oversight to guarantee Surya Cement product excellence.",
       icon: <CheckCircle size={48} className="text-orange-600" />,
       steps: [
-        "Automated scanning systems",
-        "Manual inspection points",
-        "Performance testing"
+        "Advanced automated scanning systems for continuous checks.",
+        "Critical manual inspection points overseen by expert technicians.",
+        "Comprehensive performance testing ensures compliance with the highest standards."
       ],
       image:  `${IMAGE_BASE}/inspection.jpg`
     },
@@ -161,7 +161,7 @@ const ManufacturingProcessPage = () => {
             </h2>
             <div className="w-24 h-1 bg-orange-600 mx-auto mb-6" />
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Each stage of production undergoes rigorous quality control to ensure exceptional results
+              Each stage of production undergoes rigorous quality control to ensure exceptional results, upholding the Surya Cement standard of excellence.
             </p>
           </div>
 
@@ -228,15 +228,15 @@ const ManufacturingProcessPage = () => {
             </h2>
             <div className="w-24 h-1 bg-orange-600 mx-auto mb-6" />
             <p className="text-gray-600 max-w-3xl mx-auto">
-              Combining decades of expertise with innovative technologies to deliver unmatched quality and consistency
+              Combining decades of expertise with innovative technologies to deliver the unmatched quality and consistency synonymous with Surya Cement.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <Award size={32} className="text-orange-600" />, title: "ISO Certified", desc: "Our facilities meet the highest international quality standards with ISO 9001 certification" },
-              { icon: <Settings size={32} className="text-orange-600" />, title: "Advanced Automation", desc: "Computer-controlled systems ensure precision and consistency in every product" },
-              { icon: <Shield size={32} className="text-orange-600" />, title: "Sustainable Practices", desc: "Environmentally responsible manufacturing with waste reduction and energy efficiency" }
+              { icon: <Award size={32} className="text-orange-600" />, title: "ISO Certified", desc: "Our facilities meet the highest international quality standards, proudly backed by ISO 9001 certification, ensuring reliability in every aspect of production." },
+              { icon: <Settings size={32} className="text-orange-600" />, title: "Advanced Automation", desc: "Our production lines utilize fully computer-controlled systems to ensure absolute precision, consistency, and traceability in every product batch we deliver." },
+              { icon: <Shield size={32} className="text-orange-600" />, title: "Sustainable Practices", desc: "Surya Cement is committed to environmentally responsible manufacturing, focusing on significant waste reduction, energy efficiency, and sustainable resource management." }
             ].map((item, idx) => (
               <motion.div
                 key={idx}

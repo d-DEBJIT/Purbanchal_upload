@@ -195,7 +195,7 @@ const MaintenancePage = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4 }}
           >
-            <p className="mb-2">© {new Date().getFullYear()} Purbanchal Cement. All rights reserved.</p>
+            <p className="mb-2">© {new Date().getFullYear()} Surya Cement. All rights reserved.</p>
             <p className="text-sm">We appreciate your patience during this upgrade.</p>
           </motion.div>
         </div>

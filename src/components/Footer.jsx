@@ -39,7 +39,7 @@ const Footer = () => {
                 alt="Purbanchal Cement Logo" 
                 className="h-10 brightness-125"
               />
-              <span className="ml-2 font-bold text-lg">PURBANCHAL CEMENT LTD.</span>
+              <span className="ml-2 font-bold text-lg">SURYA CEMENT LTD.</span>
             </div>
             <motion.p 
               variants={fadeIn("up", 0.5)}
@@ -187,10 +187,10 @@ const Footer = () => {
             </motion.h3>
             <motion.a 
               variants={fadeIn("up", 0.7)} 
-              href="mailto:customercare@purbanchalcement.com" 
+              href="mailto:customercare@suryacement.com" 
               className="mb-3 text-white/90 hover:underline"
             >
-              customercare@purbanchalcement.com
+              customercare@suryacement.com
             </motion.a>
             <motion.h3
               variants={textVariant(0.7)}
@@ -215,7 +215,7 @@ const Footer = () => {
         className="bg-orange-500 text-white text-center py-3 mt-8 w-full"
       >
         <div className="max-w-7xl mx-auto px-4">
-          © 2025 Purbanchal Cement Ltd. All rights reserved.
+          © 2025 Surya Cement Ltd. All rights reserved.
         </div>
       </motion.div>
     </motion.footer>

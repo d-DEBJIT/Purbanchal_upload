@@ -29,7 +29,7 @@ const BlogNewsSection = () => {
     {
       id: 2,
       title: 'Sustainable Practices in Equipment Manufacturing',
-      excerpt: 'How Purbanchal is leading the way in eco-friendly heavy equipment production.',
+      excerpt: 'How Surya Cement is leading the way in eco-friendly heavy equipment production',
       author: {
         name: 'Priya Sharma',
         role: 'Sustainability Officer',
@@ -85,7 +85,7 @@ const BlogNewsSection = () => {
         >
           <h2 className="text-lg md:text-2xl text-orange-500 font-semibold mb-3 flex items-center justify-center gap-2">
             <ArrowLeft size={18} />
-            Purbanchal Cement
+            Surya Cement
             <ArrowRight size={18} />
           </h2>
           <h1 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
@@ -99,7 +99,7 @@ const BlogNewsSection = () => {
             ))}
           </div>
           <p className="text-gray-600 max-w-2xl mx-auto mb-12 text-sm md:text-base">
-            Discover the latest updates, technologies, and stories from the heart of Purbanchal Cement.
+            Discover the latest updates, technologies, and stories from the heart of Surya Cement.
           </p>
         </motion.div>
 

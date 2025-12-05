@@ -41,7 +41,7 @@ function HomePage(){
         <SustainabilitySection />
         <ProjectSection />
         <Testimonials />
-        <CSRSection />
+        {/* <CSRSection /> */}
         <BlogNewsSection />
         <ConstructionCTA /> 
       </>

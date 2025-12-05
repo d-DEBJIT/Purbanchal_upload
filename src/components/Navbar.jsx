@@ -188,7 +188,7 @@ const Navbar = () => {
           className="bg-white p-2 rounded-lg shadow-sm inline-block"
         >
           <img
-            src={`${__IMAGE_BASE_PATH__}/logo.png`}
+            src={`${__IMAGE_BASE_PATH__}/Surya Cement_Logo-1.png`}
             alt="Purbanchal Cement Logo"
             className="h-10 w-auto cursor-pointer"
           />
