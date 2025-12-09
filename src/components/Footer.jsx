@@ -35,11 +35,11 @@ const Footer = () => {
           <motion.div variants={fadeIn("right", 0.4)} className="md:col-span-1">
             <div className="flex items-center mb-4">
               <img 
-                src={`${__IMAGE_BASE_PATH__}/logo1.png`} 
-                alt="Purbanchal Cement Logo" 
-                className="h-10 brightness-125"
+                src={`${__IMAGE_BASE_PATH__}/surya_logo-removebg.png`} 
+                alt="Surya Cement Logo" 
+                className="h-15 brightness-110"
               />
-              <span className="ml-2 font-bold text-lg">SURYA CEMENT LTD.</span>
+             
             </div>
             <motion.p 
               variants={fadeIn("up", 0.5)}
