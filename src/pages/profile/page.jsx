@@ -20,18 +20,65 @@ const ProfilePage = () => {
   const [expandedVision, setExpandedVision] = useState(false);
 
   const leadershipTeam = [
-    {
-      id: 1,
-      name: "Vedant Agarwal",
-      position: "Director at Surya Cement Limited, Maithan Group",
-      bio: "Industry veteran with 25+ years experience in manufacturing and operations",
-      image: `${IMAGE_BASE}/Vedant-Agarwal.jpg`,
-      social: {
-        linkedin: "https://in.linkedin.com/in/vedant212",
-        // twitter: "#"
-      }
-    },
-  ];
+  {
+    id: 1,
+    name: "Vedant Agarwal",
+    position: "Director at Surya Cement Limited, Maithan Group",
+    bio: [
+      "Vedant Agarwal is the Director of Purbanchal Cement Limited, the company behind Surya Gold Cement and Surya Concrete, two of the fastest-growing cement brands in Eastern India. A new-age business leader with a sharp strategic mind, Vedant represents the next generation of leadership driving the company's growth, modernization, and sustainability agenda.",
+      
+      "A graduate of Purdue University, USA, Vedant blends a global perspective with a deep understanding of India's industrial landscape. Since joining Purbanchal Cement in 2022, he has been leading major transformation initiatives — including capacity expansion from 0.5 million to 1 million tonnes, investment in digital and process automation, and strengthening supply chain integration through grinding units and mining partnerships.",
+      
+      "Vedant's leadership philosophy is rooted in three pillars: innovation, efficiency, and empowerment. He champions a data-driven approach to decision-making, encourages young talent to take ownership, and fosters a culture where technology and teamwork power performance. His goal is to position Purbanchal Cement as a benchmark for quality and operational excellence in India's eastern and north-eastern cement markets.",
+      
+      "Beyond business, Vedant believes in building organizations that create sustainable impact by empowering people, uplifting communities, and contributing to regional infrastructure growth."
+    ],
+    image: `${IMAGE_BASE}/Vedant-Agarwal.jpg`,
+    social: {
+      linkedin: "https://in.linkedin.com/in/vedant212",
+      // twitter: "#"
+    }
+  },
+  {
+    id: 2,
+    name: "Subrat Kumar Dhal",
+    position: "position Required",
+    bio: [
+      "Bio needed"
+    ],
+    image: `${IMAGE_BASE}/Subrat_Kumar_Dhal.jpeg`, // Replace with actual image path
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
+  },
+  {
+    id: 3,
+    name: "Vivek Gupta",
+    position: "position Required",
+    bio: [
+      "Bio needed"
+    ],
+    image: `${IMAGE_BASE}/Vivek_Gupta.jpeg`, // Replace with actual image path
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
+  },
+  {
+    id: 4,
+    name: "Jayanta Tarafdar",
+    position: "position Required",
+    bio: [
+      "Bio needed"
+    ],
+    image: `${IMAGE_BASE}/Jayanta_Tarafdar.jpeg`, // Replace with actual image path
+    social: {
+      linkedin: "#",
+      twitter: "#"
+    }
+  }
+];
 
   const milestones = [
     { year: "2003", event: "Company promoted by founders, laying the groundwork for a vision of quality manufacturing." },
@@ -123,7 +170,7 @@ const ProfilePage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Mission</h3>
                   <p className="text-gray-600">
-                    To deliver superior, sustainable manufacturing solutions through innovation, uncompromising quality, and operational excellence, building a stronger future for all our stakeholders.
+                    As a Maithan Group company, our mission is to redefine what a cement company can be—by focusing not just on growth, but on doing more with less. Through Surya Gold and Surya Concretec.
                   </p>
                   {expandedMission && (
                     <motion.div
@@ -131,12 +178,13 @@ const ProfilePage = () => {
                       animate={{ opacity: 1, height: 'auto' }}
                       className="mt-4 text-gray-600"
                     >
-                      <p>We achieve this by:</p>
+                      <p>We commit to:</p>
                       <ul className="list-disc pl-5 mt-2 space-y-1">
-                        <li>Investing in cutting-edge technology</li>
-                        <li>Developing our workforce through continuous training</li>
-                        <li>Implementing sustainable manufacturing practices</li>
-                        <li>Building long-term partnerships with clients</li>
+                        <li>Leading the green transition in Indian cement by moving towards 100% sustainable energy.</li>
+                        <li>Doubling efficiency across production, logistics, and service.</li>
+                        <li>Delivering dependable quality with consistent margins—even in volatile markets.</li>
+                        <li>Achieving 6 million tons production by 2030, aligning with our efficiency-first mindset.</li>
+                        <li>Continuously challenging norms, embracing change as our operating principle.</li>
                       </ul>
                     </motion.div>
                   )}
@@ -160,9 +208,9 @@ const ProfilePage = () => {
                 <div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">Our Vision</h3>
                   <p className="text-gray-600">
-                    To be recognized as the market leader in Eastern India and a global benchmark for innovative and sustainable cement manufacturing under the Surya Cement brand.
+                    To be the most efficient and future-ready cement company — delivering lasting value through innovation, sustainability, and forward-thinking to help build a stronger, smarter, and more inclusive nation.
                   </p>
-                  {expandedVision && (
+                  {/* {expandedVision && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: 'auto' }}
@@ -176,7 +224,7 @@ const ProfilePage = () => {
                         <li>Double workforce while maintaining quality standards</li>
                       </ul>
                     </motion.div>
-                  )}
+                  )} */}
                 </div>
                 <ChevronDown 
                   className={`ml-auto text-blue-600 transition-transform ${expandedVision ? 'rotate-180' : ''}`}
@@ -191,46 +239,110 @@ const ProfilePage = () => {
 {/* Leadership Team */}
 <section className="py-16 bg-white">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    
+    <div className="text-center mb-16">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Leadership Team
+      </h2>
+      <div className="w-24 h-1 bg-orange-600 mx-auto mb-6" />
+    </div>
 
-    <div className="space-y-12">
-      {leadershipTeam.map((leader) => (
+    {/* Vedant Agarwal - Full detailed view */}
+    {leadershipTeam.slice(0, 1).map((leader) => (
+      <motion.div
+        key={leader.id}
+        className="flex flex-col md:flex-row items-center md:items-stretch bg-transparent shadow-none hover:shadow-none transition-shadow mb-16"
+        whileHover={{ y: -5 }}
+      >
+        <div className="md:w-1/3 flex justify-center items-center p-8">
+          <img
+            src={leader.image}
+            alt={leader.name}
+            className="w-80 h-80 object-cover rounded-full shadow-lg"
+          />
+        </div>
+
         <motion.div
-          key={leader.id}
-          className="flex flex-col md:flex-row items-center md:items-stretch bg-transparent shadow-none hover:shadow-none transition-shadow"
-          whileHover={{ y: -5 }}
+          className="md:w-2/3 p-8 flex flex-col justify-center"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true, amount: 0.5 }}
         >
-          {/* Image Column */}
-          <div className="md:w-1/3 flex justify-center items-center p-8">
-            <img
-              src={leader.image}
-              alt={leader.name}
-              className="w-80 h-80 object-cover rounded-full shadow-lg"
-            />
-          </div>
-
-          {/* Text Column */}
-          <motion.div
-            className="md:w-2/3 p-8 flex flex-col justify-center"
-            initial={{ opacity: 0, x: -80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.7 }}
-            viewport={{ once: true, amount: 0.5 }}
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-2">{leader.name}</h3>
-            <p className="text-orange-600 mb-4">{leader.position}</p>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">{leader.name}</h3>
+          <p className="text-orange-600 mb-4">{leader.position}</p>
+          {Array.isArray(leader.bio) ? (
+            leader.bio.map((paragraph, index) => (
+              <p key={index} className="text-gray-600 mb-4">
+                {paragraph}
+              </p>
+            ))
+          ) : (
             <p className="text-gray-600 mb-6">{leader.bio}</p>
-            <div className="flex space-x-4">
-              <a
-                href={leader.social.linkedin}
-                className="text-blue-700 hover:text-orange-400"
-              >
-                <Linkedin size={20} />
-              </a>
+          )}
+          <div className="flex space-x-4">
+            <a
+              href={leader.social.linkedin}
+              className="text-blue-700 hover:text-orange-400"
+            >
+              <Linkedin size={20} />
+            </a>
+          </div>
+        </motion.div>
+      </motion.div>
+    ))}
+
+    {/* Only 3 cards horizontally - Next 3 team members */}
+    <div className="mt-12">
+      <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+        Executive Leadership
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {leadershipTeam.slice(1, 4).map((leader) => ( // Changed to slice(1, 4) to get exactly 3 items
+          <motion.div
+            key={leader.id}
+            className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+            whileHover={{ y: -5 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            {/* Profile Image */}
+            <div className="p-6 flex justify-center">
+              <div className="relative w-48 h-48">
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-full h-full object-contain rounded-full border-4 border-orange-100"
+                />
+              </div>
+            </div>
+
+            {/* Profile Info */}
+            <div className="p-6 pt-0 text-center">
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{leader.name}</h3>
+              <p className="text-orange-600 font-medium mb-4">{leader.position}</p>
+              
+              {/* Short Bio */}
+              <p className="text-gray-600 text-sm mb-6">
+                {Array.isArray(leader.bio) ? leader.bio[0] : leader.bio}
+              </p>
+
+              {/* Social Links */}
+              <div className="flex justify-center space-x-4 pt-4 border-t border-gray-100">
+                {leader.social.linkedin && (
+                  <a
+                    href={leader.social.linkedin}
+                    className="text-gray-400 hover:text-blue-700 transition-colors"
+                  >
+                    <Linkedin size={20} />
+                  </a>
+                )}
+              </div>
             </div>
           </motion.div>
-        </motion.div>
-      ))}
+        ))}
+      </div>
     </div>
   </div>
 </section>

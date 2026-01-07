@@ -3,18 +3,18 @@ import { ChevronDown, Phone, Menu, X } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const navItems = [
-  {
-    label: "Dealer Corner",
-    icon: <ChevronDown size={16} />,
-    path: "/pages/maintenance",
-  },
-  {
-    label: "Our Businesses",
-    icon: <ChevronDown size={16} />,
-    path: "/pages/maintenance",
-  },
+  // {
+  //   label: "Dealer Corner",
+  //   icon: <ChevronDown size={16} />,
+  //   path: "/pages/maintenance",
+  // },
   {
     label: "Contact Us",
+    icon: <Phone size={16} />,
+    path: "/pages/contact-us",
+  },
+  {
+    label: "Customer Care",
     icon: <Phone size={16} />,
     path: "/pages/customercare",
   },

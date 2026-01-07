@@ -15,34 +15,34 @@ const CustomerCarePage = () => {
       {
         icon: <Wrench size={48} className="text-orange-500" />,
         title: "Machine Maintenance",
-        description: "Expert maintenance to keep your systems running flawlessly.",
+        description: "Expert maintenance to keep your systems running flawlessly, minimizing downtime and maximizing operational lifespan. ",
       },
       {
         icon: <Wrench size={48} className="text-orange-500" />,
         title: "Troubleshooting",
-        description: "Quick diagnosis and repair of technical issues.",
+        description: "Quick diagnosis and repair of technical issues, ensuring fast resolution and preserving your project's timeline.",
       },
       {
         icon: <Wrench size={48} className="text-orange-500" />,
         title: "Performance Optimization",
-        description: "Improve efficiency and reduce downtime.",
+        description: "Proactive strategies to improve efficiency and reduce waste, helping you achieve the highest performance standards using Surya Cement products.",
       },
     ],
     rmg: [
       {
         icon: <Building2 size={48} className="text-blue-500" />,
         title: "RMG Consultation",
-        description: "Get expert guidance on RMG projects.",
+        description: "Get expert guidance on RMG projects, including mix design optimization, technical specifications, and site execution planning from our specialist team. ",
       },
       {
         icon: <Building2 size={48} className="text-blue-500" />,
         title: "Regulatory Compliance",
-        description: "Ensure all projects meet industry regulations.",
+        description: "Ensure all your projects meet local and international industry regulations, providing peace of mind through complete documentation and expert oversight.",
       },
       {
         icon: <Building2 size={48} className="text-blue-500" />,
         title: "Project Management",
-        description: "End-to-end support for your RMG needs.",
+        description: "End-to-end support for your RMG needs, covering logistics coordination, quality monitoring, and timely delivery management.",
       },
     ],
   };
@@ -66,8 +66,12 @@ const CustomerCarePage = () => {
               Customer <span className="text-orange-400">Care</span>
             </h1>
             <p className="text-lg text-gray-200 mt-4 max-w-2xl mx-auto">
-              We are here to help you with technical support, RMG services, and more.
+              Your Project Success is Our Priority.
             </p>
+            <p className="text-lg text-gray-200 mt-4 max-w-7xl mx-auto">At Surya Cement, our commitment extends beyond delivering premium products. Our 
+dedicated Technical Services and RMG Support team is here to provide expert guidance, 
+swift troubleshooting, and specialized assistance to ensure your project's optimal 
+performance from start to finish. </p>
           </motion.div>
         </div>
       </div>
@@ -137,7 +141,7 @@ const CustomerCarePage = () => {
             >
               <Mail className="text-blue-500 mb-3" size={36} />
               <h3 className="font-semibold">Email Us</h3>
-              <p className="text-gray-600">customercare@purbanchalcement.com</p>
+              <p className="text-gray-600">customercare@https://www.google.com/search?q=suryacement.com</p>
             </motion.div>
             <motion.div
               whileHover={{ scale: 1.05 }}

@@ -35,19 +35,19 @@ const CSRSection = () => {
     <section className="py-16 bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center md:items-stretch gap-8 lg:gap-12">
-          
+
           {/* Carousel */}
           <div className="w-full md:w-1/2 relative">
             <div className="relative w-full overflow-hidden rounded-lg shadow-lg h-[400px]">
               {slides.map((slide, index) => (
-                <div 
+                <div
                   key={index}
                   className={`absolute inset-0 transition-all duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
                   style={{
                     transform: `translateX(${(index - currentSlide) * 100}%)`
                   }}
                 >
-                  <img 
+                  <img
                     src={slide.image}
                     className="w-full h-full object-cover rounded-lg"
                     alt={slide.alt}
@@ -74,7 +74,7 @@ const CSRSection = () => {
 
           {/* Text content aligned vertically */}
           <div className="w-full md:w-1/2 text-gray-800 flex items-center h-full">
-            <div 
+            <div
               className="space-y-6 w-full"
               data-aos="fade-left"
               data-aos-duration="800"
@@ -87,19 +87,18 @@ const CSRSection = () => {
                 Building Communities, <span className="text-orange-500">Beyond Cement</span>
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                At Purbanchal Cement, we believe our responsibility extends beyond building
-                strong structures. Through initiatives in education, health, and environmental
-                sustainability, we aim to create lasting positive impact in the communities we
-                serve.
+                At Surya Cement, we believe our responsibility extends beyond building strong
+                structures. Through focused initiatives in education, health, and environmental
+                sustainability, we aim to create lasting positive impact in the communities we serve.
               </p>
               <div className="pl-4 border-l-4 border-orange-500 transform hover:scale-[1.01] transition-transform duration-300">
                 <p className="text-gray-600 italic">
                   "Empowering people and protecting the planet isn’t just a duty—it’s our promise for
-                  a better tomorrow"
+                  a better tomorrow."
                 </p>
               </div>
               <button
-                onClick={() => navigate("/pages/maintenance")}
+                onClick={() => navigate("/pages/csr")}
                 className="bg-orange-500 text-white px-8 py-3 rounded-lg hover:bg-orange-600 transition-all font-medium shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300 flex items-center gap-2"
               >
                 Explore Our CSR Initiatives

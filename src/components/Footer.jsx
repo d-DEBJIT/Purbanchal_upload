@@ -150,8 +150,8 @@ const Footer = () => {
               {[
                 { name: "Contact Us", path: "/pages/customercare" },
                 { name: "Customer Care", path: "/pages/customercare" },
-                { name: "Careers", path: "/pages/maintenance" },
-                { name: "FAQs", path: "/pages/maintenance" },
+                { name: "Careers", path: "/pages/careers" },
+                { name: "FAQs", path: "/pages/faqs" },
                 { name: "Disclaimer", path: "/pages/maintenance" },
                 { name: "Privacy Policy", path: "/pages/maintenance" }
               ].map((item, idx) => (

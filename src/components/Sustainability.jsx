@@ -211,7 +211,7 @@ const SustainabilitySection = () => {
           viewport={{ once: true }}
         >
           <a
-            onClick={() => navigate("/pages/maintenance")}
+            onClick={() => navigate("/pages/sustainability")}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 border border-orange-500 text-orange-500 rounded-lg hover:bg-orange-500 hover:text-white transition-colors duration-300 font-medium cursor-pointer"

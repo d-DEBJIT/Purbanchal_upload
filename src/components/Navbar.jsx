@@ -87,8 +87,8 @@ const Navbar = () => {
       hasDropdown: true,
       dropdownItems: [
         { path: "/pages/profile", label: "Our Company" },
-        { path: "/pages/profile", label: "Our Team" },
-        { path: "/pages/profile", label: "Mission & Vision" },
+        // { path: "/pages/profile", label: "Our Team" },
+        // { path: "/pages/profile", label: "Mission & Vision" },
       ],
     },
     {
@@ -105,17 +105,12 @@ const Navbar = () => {
     {
       href: "#manufacturing",
       label: "Manufacturing",
-      hasDropdown: true,
-      dropdownItems: [
-        { path: "/pages/manufacturing", label: "Our Process" },
-        { path: "/pages/manufacturing", label: "Facilities" },
-        { path: "/pages/manufacturing", label: "Quality Control" },
-      ],
+      path: "/pages/manufacturing"
     },
     { 
       href: "#sustainability", 
       label: "Sustainability",
-      path: "/pages/maintenance"
+      path: "/pages/sustainability"
     },
     { 
       href: "#media", 
@@ -125,8 +120,13 @@ const Navbar = () => {
     { 
       href: "#careers", 
       label: "Careers",
-      path: "/pages/maintenance"
+      path: "/pages/careers"
     },
+    { 
+      href: "#faqs", 
+      label: "FAQs",
+      path: "/pages/faqs"
+    }
   ];
 
   const toggleDropdown = (index) => {

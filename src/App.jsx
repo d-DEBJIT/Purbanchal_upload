@@ -27,6 +27,11 @@ import MaintenancePage from "./pages/maintenance/page";
 import ManufacturingProcessPage from "./pages/Manufacturing/page";
 import CustomerCarePage from "./pages/customercare/page";
 import ProfilePage from "./pages/profile/page";
+import SustainabilityPage from "./pages/sustainability/page";
+import CSRDetailedPage from "./pages/csr/page";
+import CareersPage from "./pages/careers/page";
+import ContactPage from "./pages/contact-us/page";
+import FAQPage from "./pages/faqs/page";
 function HomePage(){
   return (
       <>
@@ -41,7 +46,7 @@ function HomePage(){
         <SustainabilitySection />
         <ProjectSection />
         <Testimonials />
-        {/* <CSRSection /> */}
+        <CSRSection />
         <BlogNewsSection />
         <ConstructionCTA /> 
       </>
@@ -75,8 +80,18 @@ function App() {
           <Route path="/pages/customercare" element={<CustomerCarePage />} />
           {/* Profile page ProfilePage */}
           <Route path="/pages/profile" element={<ProfilePage />} />
+          {/* Profile page SustainabilityPage */}
+          <Route path="/pages/sustainability" element={<SustainabilityPage />} />
+          {/* CSR page CSRPage */}
+          <Route path="/pages/csr" element={<CSRDetailedPage />} />
+          {/* CSR page CareersPage */}
+          <Route path="/pages/careers" element={<CareersPage />} />
 
+          <Route path="/pages/contact-us" element={<ContactPage />} />
 
+          <Route path="/pages/faqs" element={<FAQPage />} />
+
+          <Route path="/pages/faqs" element={<FAQPage />} />
 
         </Routes>
         <Footer />
